@@ -191,11 +191,11 @@
     --border-radius-2xl: 1rem; /* 16px */
 
     /* Shadows */
-    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
-    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.15);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.25);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.25);
 
     /* Paddings */
     --padding-xs: var(--spacing-xs);
@@ -234,6 +234,16 @@
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
+
+    /* Gaps */
+    --gap-xs: 0.25rem; /* 4px */
+    --gap-sm: 0.5rem; /* 8px */
+    --gap-md: 0.75rem; /* 12px */
+    --gap-lg: 1rem; /* 16px */
+    --gap-xl: 1.5rem; /* 24px */
+    --gap-2xl: 2rem; /* 32px */
+    --gap-3xl: 3rem; /* 48px */
+    --gap-4xl: 4rem; /* 64px */
 
     /* Transitions */
     --transition-duration-fast: 0.2s;

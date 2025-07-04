@@ -5,6 +5,10 @@
 <template>
     <header>
         <nav>
+            <NuxtLink to="/" class="navbar-brand">
+                <NuxtImg src="/logo.png" alt="VanillyNeko Logo" />
+                <span>VanillyNeko</span>
+            </NuxtLink>
             <ul class="navbar-items">
                 <li>
                     <NuxtLink to="/">Home</NuxtLink>
@@ -14,14 +18,13 @@
                         <template #trigger>
                             <span>Donations</span>
                         </template>
-                        <ul>
-                            <li>
-                                <NuxtLink to="/about/team">Team</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/about/history">History</NuxtLink>
-                            </li>
-                        </ul>
+
+                        <li>
+                            <NuxtLink to="/about/team">Team</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about/history">History</NuxtLink>
+                        </li>
                     </Dropdown>
                 </li>
                 <li>
@@ -29,14 +32,13 @@
                         <template #trigger>
                             <span>Socials</span>
                         </template>
-                        <ul>
-                            <li>
-                                <NuxtLink to="/about/team">Team</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/about/history">History</NuxtLink>
-                            </li>
-                        </ul>
+
+                        <li>
+                            <NuxtLink to="/about/team">Team</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about/history">History</NuxtLink>
+                        </li>
                     </Dropdown>
                 </li>
                 <li>
@@ -44,14 +46,13 @@
                         <template #trigger>
                             <span>Services</span>
                         </template>
-                        <ul>
-                            <li>
-                                <NuxtLink to="/about/team">Team</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/about/history">History</NuxtLink>
-                            </li>
-                        </ul>
+
+                        <li>
+                            <NuxtLink to="/about/team">Team</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about/history">History</NuxtLink>
+                        </li>
                     </Dropdown>
                 </li>
                 <li>
@@ -59,14 +60,13 @@
                         <template #trigger>
                             <span>Logins</span>
                         </template>
-                        <ul>
-                            <li>
-                                <NuxtLink to="/about/team">Team</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/about/history">History</NuxtLink>
-                            </li>
-                        </ul>
+
+                        <li>
+                            <NuxtLink to="/about/team">Team</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about/history">History</NuxtLink>
+                        </li>
                     </Dropdown>
                 </li>
                 <li>
@@ -74,14 +74,12 @@
                         <template #trigger>
                             <span>Contact Us</span>
                         </template>
-                        <ul>
-                            <li>
-                                <NuxtLink to="/about/team">Team</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/about/history">History</NuxtLink>
-                            </li>
-                        </ul>
+                        <li>
+                            <NuxtLink to="/about/team">Team</NuxtLink>
+                        </li>
+                        <li>
+                            <NuxtLink to="/about/history">History</NuxtLink>
+                        </li>
                     </Dropdown>
                 </li>
             </ul>

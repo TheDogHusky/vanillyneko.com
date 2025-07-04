@@ -8,27 +8,73 @@ header {
 
 nav {
     background-color: transparent;
-    padding: var(--padding-md);
+    padding: 0;
+    height: calc(var(--size-xl) + (var(--padding-md) * 2));
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    color: var(--color-white-100);
 }
 
 nav.scrolled {
     background-color: var(--color-white-100);
+    color: var(--color-text);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--gap-md);
+    height: 100%;
+    width: fit-content;
+    padding: 0 var(--padding-md);
+    text-decoration: none;
+    color: inherit;
+    font-size: var(--font-size-lg);
+}
+
+.navbar-brand:hover {
+    color: inherit;
+}
+
+.navbar-brand img {
+    height: 32px;
+    width: auto;
 }
 
 .navbar-items {
     list-style: none;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: var(--gap-md);
     align-items: center;
+    height: 100%;
+    width: fit-content;
+    padding: 0 var(--padding-md);
 }
 
-.navbar-items li a {
+.navbar-items li {
+    height: 100%;
+}
+
+.navbar-items > li > a {
+    height: 100%;
+    display: inline-flex;
+    align-items: center;
     text-decoration: none;
-    color: var(--color-white);
+    color: inherit;
     font-size: var(--font-size-lg);
 }
 
-nav.scrolled > .navbar-items li a {
-    color: var(--color-text);
+.navbar-items .dropdown, .navbar-items .dropdown-trigger {
+    height: 100%;
+}
+
+nav.scrolled > .navbar-items > li > a {
+    color: inherit;
+}
+
+.navbar-items > li > a:hover {
+    color: var(--color-primary-200);
 }
