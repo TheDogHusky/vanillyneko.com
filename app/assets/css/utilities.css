@@ -1,0 +1,72 @@
+.font-ms {
+    font-size: var(--font-size-sm);
+}
+
+.font-md {
+    font-size: var(--font-size-md);
+}
+
+.font-lg {
+    font-size: var(--font-size-lg);
+}
+
+.font-xl {
+    font-size: var(--font-size-xl);
+}
+
+.font-2xl {
+    font-size: var(--font-size-2xl);
+}
+
+.font-3xl {
+    font-size: var(--font-size-3xl);
+}
+
+.font-4xl {
+    font-size: var(--font-size-4xl);
+}
+
+.font-5xl {
+    font-size: var(--font-size-5xl);
+}
+
+.font-6xl {
+    font-size: var(--font-size-6xl);
+}
+
+.font-7xl {
+    font-size: var(--font-size-7xl);
+}
+
+.font-8xl {
+    font-size: var(--font-size-8xl);
+}
+
+.font-xs {
+    font-size: var(--font-size-xs);
+}
+
+.font-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.font-semibold {
+    font-weight: var(--font-weight-semibold);
+}
+
+.font-medium {
+    font-weight: var(--font-weight-medium);
+}
+
+.font-normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.font-light {
+    font-weight: var(--font-weight-light);
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+}

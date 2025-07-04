@@ -35,7 +35,7 @@ p {
 }
 
 a {
-    color: var(--color-primary);
+    color: var(--color-primary-500);
     transition: color var(--transition-duration-fast) var(--transition-timing-function);
 }
 
@@ -47,7 +47,7 @@ a:hover {
     color: var(--color-primary-600);
 }
 
-a:focus {
-    outline: 2px solid var(--color-primary-500);
+a:focus-visible {
+    outline: 2px solid var(--color-primary-600);
     outline-offset: 2px;
 }

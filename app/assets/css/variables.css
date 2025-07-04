@@ -243,6 +243,7 @@
 
     /* Z-Index */
     --z-index-base: 0;
+    --z-index-header: 100;
     --z-index-dropdown: 1000;
     --z-index-modal: 1050;
     --z-index-tooltip: 1100;

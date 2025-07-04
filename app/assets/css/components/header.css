@@ -1,0 +1,34 @@
+header {
+    z-index: var(--z-index-header);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+nav {
+    background-color: transparent;
+    padding: var(--padding-md);
+}
+
+nav.scrolled {
+    background-color: var(--color-white-100);
+}
+
+.navbar-items {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-items li a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: var(--font-size-lg);
+}
+
+nav.scrolled > .navbar-items li a {
+    color: var(--color-text);
+}
