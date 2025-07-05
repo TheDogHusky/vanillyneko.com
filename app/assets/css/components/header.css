@@ -131,6 +131,7 @@ header.scrolled > nav > .navbar-items > li > a:hover {
 
 .navbar-toggle-wrapper.active > .navbar-toggle {
     transform: rotate(90deg);
+    color: var(--color-text);
 }
 
 .navbar-toggle-line-1, .navbar-toggle-line-2, .navbar-toggle-line-3 {
@@ -176,12 +177,15 @@ header.scrolled > nav > .navbar-items > li > a:hover {
         padding: 0;
     }
 
-    .navbar-items {
+    .navbar-collapse {
+        display: flex;
         flex-direction: column;
         width: 100%;
         align-items: center;
+        justify-content: center;
         position: fixed;
         height: 100vh;
+        overflow-y: scroll;
         background-color: var(--color-red-200);
         z-index: var(--z-index-header-items);
         top: 0;
@@ -192,6 +196,17 @@ header.scrolled > nav > .navbar-items > li > a:hover {
         transition: transform var(--transition-duration-fast) var(--transition-timing-function);
     }
 
+    .navbar-items {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        width: 15rem;
+        height: 100%;
+        padding: 0;
+        gap: var(--gap-lg);
+    }
+
     .router-link-active:not(.navbar-brand) {
         color: var(--color-primary-700) !important;
         cursor: default;
@@ -199,8 +214,9 @@ header.scrolled > nav > .navbar-items > li > a:hover {
     }
 
     .navbar-items > li {
+        display: flex;
         width: 100%;
-        text-align: center;
+        text-align: left;
         position: relative;
         left: -36px;
         height: auto;
@@ -208,7 +224,7 @@ header.scrolled > nav > .navbar-items > li > a:hover {
         transition: left var(--transition-duration-slow) var(--transition-slow-timing-function), opacity var(--transition-duration-slow) var(--transition-slow-timing-function);
     }
 
-    .navbar-items.active {
+    .navbar-collapse.active {
         transform: translateX(0);
     }
 
@@ -216,7 +232,7 @@ header.scrolled > nav > .navbar-items > li > a:hover {
         display: flex;
     }
 
-    .navbar-items.active > li {
+    .navbar-collapse > .navbar-items > li {
         left: 0;
         opacity: 1;
     }
@@ -244,5 +260,9 @@ header.scrolled > nav > .navbar-items > li > a:hover {
 
     .navbar-items > li:nth-child(6) {
         transition-delay: .425s;
+    }
+
+    .navbar-items .dropdown, .navbar-items .dropdown-trigger {
+        height: auto;
     }
 }

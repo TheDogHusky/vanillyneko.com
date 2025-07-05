@@ -29,8 +29,7 @@ header.scrolled .dropdown-trigger:hover {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-    top: 100%;
-    position: absolute;
+    position: relative;
     flex-direction: column;
     list-style: none;
     gap: var(--padding-xs);
@@ -127,4 +126,99 @@ header.scrolled .dropdown-trigger:hover {
 
 .sub-dropdown-content.active {
     display: inline-flex;
+}
+
+/* Responsive behavior */
+@media screen and (max-width: 728px) {
+    .dropdown {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        overflow: hidden;
+        height: auto;
+    }
+
+    .dropdown.active {
+        height: auto;
+    }
+
+    .dropdown-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        /* Define the transition speed and easing for a smooth effect */
+        transition: height 0.35s ease-out, opacity 0.35s ease-out;
+        /* Positioning for the dropdown */
+        position: static;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        width: max-content; /* Adjust as needed */
+        min-width: 100%;
+    }
+
+    .dropdown-content {
+        display: flex;
+        box-shadow: none;
+        height: auto;
+        border-radius: 0;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+        padding-left: var(--padding-lg);
+        background-color: transparent;
+        justify-content: flex-start;
+        text-align: left;
+        position: relative;
+    }
+
+    .dropdown-trigger {
+        width: fit-content;
+        flex-direction: row-reverse;
+    }
+
+    .dropdown-trigger:hover {
+        color: var(--color-primary-700);
+    }
+
+    .dropdown-trigger > span.iconify {
+        transition: transform var(--transition-duration-fast) var(--transition-timing-function);
+        transform: rotate(0deg);
+    }
+
+    .dropdown-trigger.active > span.iconify {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-content a {
+        padding: var(--padding-sm);
+    }
+
+    .sub-dropdown {
+        max-width: calc(15rem - var(--padding-lg) * 2)
+    }
+
+    .sub-dropdown-trigger {
+        width: 100%;
+        padding: var(--padding-sm);
+        text-align: left;
+    }
+
+    .sub-dropdown-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: calc(15rem - var(--padding-lg) * 2);
+        padding-left: var(--padding-lg);
+        background-color: transparent;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .sub-dropdown-trigger {
+        flex-direction: row-reverse;
+    }
 }
