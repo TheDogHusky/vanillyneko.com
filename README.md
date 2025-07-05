@@ -1,23 +1,25 @@
-# Nuxt Minimal Starter
+# vanillyneko.com
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+VanillyNeko's Personal Website, made with Nuxt 3 (v4 compatible), dockerized.
 
-## Setup
+## Docker usage
+
+Please refer to the [DOCKER.md](DOCKER.md) file for detailed instructions on how to use Docker with this project.
+
+## Getting Started
 
 Make sure to install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
 # yarn
 yarn install
+```
 
-# bun
-bun install
+Create a `.env` file in the root directory of the project. You can use the provided `.env.example` as a template.
+
+```bash
+cp .env.example .env
+nano .env
 ```
 
 ## Development Server
@@ -25,17 +27,8 @@ bun install
 Start the development server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
 # yarn
 yarn dev
-
-# bun
-bun run dev
 ```
 
 ## Production
@@ -43,33 +36,22 @@ bun run dev
 Build the application for production:
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
 # yarn
 yarn build
-
-# bun
-bun run build
 ```
 
 Locally preview production build:
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
 # yarn
 yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Run the production server:
+
+Make sure to set the `NODE_ENV` environment variable to `production` before running the server. Also, add a NITRO_PORT environment variable if you want to change the default port (3000).
+
+```bash
+# Use node.js 22 or higher
+node .output/server/index.mjs
+```
