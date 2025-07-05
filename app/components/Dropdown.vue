@@ -26,7 +26,6 @@ const onEnter = (el: Element, done: any) => {
     const element = el as HTMLElement;
     element.style.height = '0';
     element.style.opacity = '0';
-    console.log('Transition started:', element.style.height);
 
     // This is a trick to ensure the browser applies the initial state
     // before calculating the end state on the next frame.
@@ -36,7 +35,6 @@ const onEnter = (el: Element, done: any) => {
     requestAnimationFrame(() => {
         element.style.height = `${el.scrollHeight}px`;
         element.style.opacity = '1';
-        console.log('Transition started:', element.style.height);
         done();
     });
 };
@@ -62,11 +60,6 @@ const onLeave = (el: Element) => {
         element.style.opacity = '0';
     });
 };
-
-// Clean up after leave
-const onAfterLeave = (el: Element) => {
-    // Optional cleanup if needed
-};
 </script>
 
 <template>
@@ -80,7 +73,6 @@ const onAfterLeave = (el: Element) => {
             @enter="onEnter"
             @after-enter="onAfterEnter"
             @leave="onLeave"
-            @after-leave="onAfterLeave"
         >
             <div class="dropdown-content-wrapper" v-if="active">
                 <ul ref="dropdownContent" class="dropdown-content" :class="{ active }">
