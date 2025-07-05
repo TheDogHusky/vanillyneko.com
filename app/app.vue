@@ -1,10 +1,13 @@
 <script setup lang="ts">
-
+const runtimeConfig = useRuntimeConfig();
+const wallpaper = runtimeConfig.public.backgroundImage;
 </script>
 
 <template>
-    <Header />
-    <NuxtLoadingIndicator />
-    <NuxtPage />
-    <Footer />
+    <div :style="{ '--background-image': 'url(\'' + wallpaper + '\');' }">
+        <Header />
+        <NuxtLoadingIndicator />
+        <NuxtPage />
+        <Footer />
+    </div>
 </template>
