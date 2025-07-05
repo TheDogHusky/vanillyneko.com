@@ -34,11 +34,13 @@ const toggleItems = () => {
         <nav>
             <div class="navbar-left">
                 <div class="navbar-toggle-wrapper" @click="toggleItems">
-                    <div class="navbar-toggle">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                    <svg class="navbar-toggle" viewBox="0 0 24 24" stroke="currentColor" focusable="false">
+                        <g transform="translate(12,12)">
+                            <path class="navbar-toggle-line-1" d="M-9 -5 L9 -5" fill="none" stroke-width="2"></path>
+                            <path class="navbar-toggle-line-2" d="M-9 0 L9 0" fill="none" stroke-width="2"></path>
+                            <path class="navbar-toggle-line-3" d="M-9 5 L9 5" fill="none" stroke-width="2"></path>
+                        </g>
+                    </svg>
                 </div>
                 <NuxtLink to="/" class="navbar-brand">
                     <NuxtImg src="/img/logo.png" alt="VanillyNeko Logo" />

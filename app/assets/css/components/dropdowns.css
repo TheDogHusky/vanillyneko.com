@@ -10,7 +10,7 @@
     padding: 0;
     background: none;
     border: none;
-    font-size: var(--font-size-md);
+    font-size: var(--font-size-lg);
     color: inherit;
     cursor: pointer;
     transition: color var(--transition-duration-fast) var(--transition-timing-function);

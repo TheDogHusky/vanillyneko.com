@@ -99,56 +99,55 @@ header.scrolled > nav > .navbar-items > li > a:hover {
 }
 
 .navbar-toggle {
-    display: none;
-    height: calc(var(--size-lg) - 3px);
-    width: var(--size-lg);
+    display: inline-block;
+    height: var(--size-xl);
+    width: var(--size-xl);
     background: none;
     border: none;
     color: inherit;
+    transition: transform var(--transition-duration-slow) var(--transition-slow-timing-function);
 }
 
 .navbar-toggle-wrapper {
-    display: flex;
+    display: none;
+    position: relative;
+    padding: var(--padding-md);
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: var(--size-4xl);
     cursor: pointer;
+    z-index: calc(var(--z-index-header-items) + 1);
 }
 
-.navbar-toggle > span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background-color: currentColor;
+.navbar-toggle-wrapper.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar-left:has(.navbar-toggle-wrapper.active) > .navbar-brand {
+    left: calc(var(--padding-md) * 4);
     position: relative;
-    transition: background-color var(--transition-duration-fast) var(--transition-timing-function);
 }
 
-.navbar-toggle > span:nth-child(2) {
-    top: 3px;
+.navbar-toggle-wrapper.active > .navbar-toggle {
+    transform: rotate(90deg);
 }
 
-.navbar-toggle > span:nth-child(3) {
-    top: 6px;
+.navbar-toggle-line-1, .navbar-toggle-line-2, .navbar-toggle-line-3 {
+    transition: transform var(--transition-duration-slow) var(--transition-slow-timing-function), opacity var(--transition-duration-slow) var(--transition-slow-timing-function);
 }
 
-.navbar-toggle-wrapper:hover > .navbar-toggle > span {
-    background-color: var(--color-primary-200);
+.navbar-toggle-wrapper.active > .navbar-toggle .navbar-toggle-line-1 {
+    transform: rotate(45deg) translate(0,5px);
 }
 
-.navbar-toggle-wrapper.active > .navbar-toggle > span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 3px;
-}
-
-.navbar-toggle-wrapper.active > .navbar-toggle > span:nth-child(2) {
+.navbar-toggle-wrapper.active > .navbar-toggle .navbar-toggle-line-2 {
+    transform: rotate(135deg);
     opacity: 0;
 }
 
-.navbar-toggle-wrapper.active > .navbar-toggle > span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 3px;
+.navbar-toggle-wrapper.active > .navbar-toggle .navbar-toggle-line-3 {
+    transform: rotate(135deg) translate(0,-5px)
 }
 
 /* Responsive Behavior */
@@ -181,19 +180,69 @@ header.scrolled > nav > .navbar-items > li > a:hover {
         flex-direction: column;
         width: 100%;
         align-items: center;
-        position: absolute;
+        position: fixed;
+        height: 100vh;
+        background-color: var(--color-red-200);
+        z-index: var(--z-index-header-items);
         top: 0;
         left: 0;
+        color: var(--color-text);
+        padding-top: calc(var(--size-xl) + (var(--padding-md) * 2));
         transform: translateX(-100%);
         transition: transform var(--transition-duration-fast) var(--transition-timing-function);
+    }
+
+    .router-link-active:not(.navbar-brand) {
+        color: var(--color-primary-700) !important;
+        cursor: default;
+        pointer-events: none;
     }
 
     .navbar-items > li {
         width: 100%;
         text-align: center;
+        position: relative;
+        left: -36px;
+        height: auto;
+        opacity: 0;
+        transition: left var(--transition-duration-slow) var(--transition-slow-timing-function), opacity var(--transition-duration-slow) var(--transition-slow-timing-function);
     }
 
-    .navbar-toggle {
-        display: block !important;
+    .navbar-items.active {
+        transform: translateX(0);
+    }
+
+    .navbar-toggle-wrapper {
+        display: flex;
+    }
+
+    .navbar-items.active > li {
+        left: 0;
+        opacity: 1;
+    }
+
+    /* Delays */
+    .navbar-items > li:nth-child(1) {
+        transition-delay: .175s;
+    }
+
+    .navbar-items > li:nth-child(2) {
+        transition-delay: .225s;
+    }
+
+    .navbar-items > li:nth-child(3) {
+        transition-delay: .275s;
+    }
+
+    .navbar-items > li:nth-child(4) {
+        transition-delay: .325s;
+    }
+
+    .navbar-items > li:nth-child(5) {
+        transition-delay: .375s;
+    }
+
+    .navbar-items > li:nth-child(6) {
+        transition-delay: .425s;
     }
 }

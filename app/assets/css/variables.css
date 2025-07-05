@@ -250,6 +250,7 @@
     --transition-duration-medium: 0.3s;
     --transition-duration-slow: 0.5s;
     --transition-timing-function: ease-in-out;
+    --transition-slow-timing-function: cubic-bezier(.4, 0, .2, 1);
 
     /* Z-Index */
     --z-index-base: 0;
@@ -257,6 +258,7 @@
     --z-index-dropdown: 1000;
     --z-index-modal: 1050;
     --z-index-tooltip: 1100;
+    --z-index-header-items: 1200;
 
     /* Breakpoints */
     --breakpoint-xs: 480px; /* Extra small devices (phones) */
