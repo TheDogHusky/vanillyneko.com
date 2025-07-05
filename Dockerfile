@@ -3,28 +3,34 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
+# Install yarn
+RUN corepack enable && corepack prepare yarn@stable --activate
+
 # Copy package files
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
 # Install all dependencies (including devDependencies for building)
-RUN npm ci
+RUN yarn install --frozen-lockfile
 
 # Copy source code
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN yarn build
 
 # Production stage
 FROM node:22-alpine AS production
 
 WORKDIR /app
 
+# Install yarn
+RUN corepack enable && corepack prepare yarn@stable --activate
+
 # Copy package files
-COPY package*.json ./
+COPY package.json yarn.lock ./
 
 # Install only production dependencies
-RUN npm ci --only=production && npm cache clean --force
+RUN yarn install --frozen-lockfile --production && yarn cache clean
 
 # Copy built application from builder stage
 COPY --from=builder /app/.output ./.output

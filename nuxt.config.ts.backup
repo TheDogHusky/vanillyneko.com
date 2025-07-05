@@ -11,10 +11,5 @@ export default defineNuxtConfig({
       '~/assets/css/main.css'
   ],
 
-  modules: ['@nuxt/icon', '@nuxt/image'],
-
-  devServer: {
-    host: '0.0.0.0',
-    port: 3000
-  }
+  modules: ['@nuxt/icon', '@nuxt/image']
 })
