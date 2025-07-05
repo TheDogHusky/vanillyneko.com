@@ -4,6 +4,8 @@ This project includes Docker support for easy deployment and development.
 
 ## Quick Start
 
+In all steps, you would need a .env file with the necessary environment variables set up. You can use the shown `.env.example` as a template.
+
 ### Production Deployment
 
 1. **Build the Docker image:**

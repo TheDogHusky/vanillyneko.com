@@ -7,10 +7,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "3000:3000"
-    environment:
-      - NODE_ENV=production
-      - NUXT_HOST=0.0.0.0
-      - NUXT_PORT=3000
+    env_file:
+      - .env
     restart: unless-stopped
     
   # Development service (optional)
@@ -23,9 +21,7 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    environment:
-      - NODE_ENV=development
-      - NUXT_HOST=0.0.0.0
-      - NUXT_PORT=3000
+    env_file:
+      - .env
     profiles:
       - dev

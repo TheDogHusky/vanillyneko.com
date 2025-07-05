@@ -1,20 +1,26 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2025-05-15',
-  devtools: { enabled: true },
+    compatibilityDate: '2025-05-15',
+    devtools: { enabled: true },
 
-  future: {
-      compatibilityVersion: 4
-  },
+    future: {
+        compatibilityVersion: 4
+    },
 
-  css: [
-      '~/assets/css/main.css'
-  ],
+    css: [
+        '~/assets/css/main.css'
+    ],
 
-  modules: ['@nuxt/icon', '@nuxt/image'],
+    modules: ['@nuxt/icon', '@nuxt/image'],
 
-  devServer: {
-    host: '0.0.0.0',
-    port: 3000
-  }
-})
+    devServer: {
+        host: '0.0.0.0',
+        port: 3000
+    },
+
+    runtimeConfig: {
+        public: {
+            backgroundImage: process.env.BACKGROUND_IMAGE || '/img/background.jpg',
+        }
+    }
+});
