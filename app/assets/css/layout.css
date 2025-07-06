@@ -37,13 +37,14 @@ section {
     height: 100%;
 }
 
-section.min-h-screen {
+.min-h-screen {
     min-height: 100dvh;
 }
 
 body {
     color: var(--color-text);
     background-color: var(--color-background);
+    font-size: var(--base-font-size);
 }
 
 .container {

@@ -29,7 +29,7 @@ h6 {
 }
 
 p {
-    font-size: var(--base-font-size);
+    font-size: inherit var(--font-size-md);
     line-height: 1;
     color: var(--color-text);
 }

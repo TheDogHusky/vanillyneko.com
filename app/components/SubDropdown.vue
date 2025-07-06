@@ -8,7 +8,7 @@ const toggleDropdown = () => {
 
 <template>
     <div class="sub-dropdown">
-        <button class="sub-dropdown-trigger" @click="toggleDropdown">
+        <button class="sub-dropdown-trigger" @click="toggleDropdown" :class="{ active }">
             <slot name="trigger"></slot>
             <Icon name="material-symbols:keyboard-arrow-down-rounded" class="font-xl" />
         </button>

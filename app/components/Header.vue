@@ -31,7 +31,7 @@ const toggleItems = () => {
 
 <template>
     <header>
-        <nav>
+        <nav class="navbar">
             <div class="navbar-left">
                 <div class="navbar-toggle-wrapper" @click="toggleItems">
                     <svg class="navbar-toggle" viewBox="0 0 24 24" stroke="currentColor" focusable="false">

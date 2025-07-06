@@ -6,7 +6,7 @@ header {
     width: 100%;
 }
 
-nav {
+.navbar {
     background-color: transparent;
     padding: 0;
     height: calc(var(--size-xl) + (var(--padding-md) * 2));
@@ -18,7 +18,7 @@ nav {
 }
 
 header.scrolled > nav {
-    background-color: var(--color-white-100);
+    background-color: var(--color-red-100);
     color: var(--color-text);
 }
 

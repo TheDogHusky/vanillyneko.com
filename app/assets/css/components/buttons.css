@@ -1,0 +1,28 @@
+.scroll-button {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+    border: none;
+    color: var(--color-white-100);
+    border-radius: 50%;
+    width: var(--size-3xl);
+    height: var(--size-3xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-4xl);
+    cursor: pointer;
+    transition: background-color var(--transition-duration-fast) var(--transition-timing-function),
+                color var(--transition-duration-fast) var(--transition-timing-function);;
+}
+
+.scroll-button:hover {
+    background-color: var(--color-primary-200);
+}
+
+.scroll-button:focus-visible {
+    outline: 2px solid var(--color-primary-600);
+    outline-offset: 2px;
+}

@@ -1,3 +1,5 @@
+/* Font Classes */
+
 .font-ms {
     font-size: var(--font-size-sm);
 }
@@ -66,7 +68,57 @@
     font-weight: var(--font-weight-light);
 }
 
+/* Flexbox Classes */
+
 .center {
     justify-content: center;
     align-items: center;
+}
+
+/* Width and Height Classes */
+
+.w-3\/4 {
+    width: 75%;
+}
+
+.min-h-10xl {
+    min-height: 25rem;
+}
+
+/* Background Classes */
+
+.bg-image {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.bg-secondary-wallpaper {
+    background-image: url('/img/background-secondary.svg');
+}
+
+.bg-tertiary-wallpaper {
+    background-image: url('/img/background-tertiary.svg');
+}
+
+.bg-primary {
+    background-color: var(--color-primary-100);
+}
+
+.bg-secondary {
+    background-color: var(--color-secondary-100);
+}
+
+.bg-dark {
+    background-color: var(--color-black-800);
+    color: var(--color-white-100);
+}
+
+/* Mobile Classes */
+
+@media screen and (max-width: 728px) {
+    .w-3\/4 {
+        width: 100%;
+    }
 }
