@@ -7,6 +7,6 @@
         <h1 class="font-6xl">Privacy Policy</h1>
     </main>
     <section class="container min-h-screen bg-secondary">
-        <PrivacyEmbed />
+        <PrivacyEmbed class="privacy-embed" />
     </section>
 </template>

@@ -1,0 +1,17 @@
+.status-embeds {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 75%;
+}
+
+.status-embed {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.privacy-embed {
+    padding: var(--padding-lg);
+}
