@@ -60,3 +60,11 @@ body {
 .min-h-screen {
     min-height: 100dvh;
 }
+
+.vertical-no-center {
+    justify-content: flex-start;
+}
+
+.horizontal-no-center {
+    align-items: flex-start;
+}

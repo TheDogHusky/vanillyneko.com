@@ -1,0 +1,34 @@
+.contact-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-lg);
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: auto;
+    gap: var(--gap-md);
+    max-width: 400px;
+    padding: var(--padding-md);
+    border-radius: var(--border-radius-md);
+}
+
+.contact-info .iconify {
+    font-size: var(--font-size-8xl);
+    color: var(--color-primary-800);
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}

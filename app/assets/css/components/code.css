@@ -1,0 +1,8 @@
+code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--color-black-800);
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    color: var(--color-white-100);
+    font-size: var(--font-size-md);
+}
