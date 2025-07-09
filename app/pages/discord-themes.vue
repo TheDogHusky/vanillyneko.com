@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { NuxtMarkdown } from "#components";
-
 interface Theme {
     markdown: string;
     repoName: string;
@@ -81,12 +79,14 @@ onMounted(() => {
         class="container min-h-screen"
         :class="theme.backgroundClass"
     >
-        <!-- TODO fix the fact NuxtLink doesn't render properly (issue on github on nuxt markdown) -->
-        <NuxtMarkdown
-            :source="theme.markdown"
-            class="markdown-content"
-            :options="{ linkify: true, breaks: true, component: true }"
-        />
+        <!-- TODO fix the fact NuxtLink doesn't render properly (issue on github on nuxt markdown) AND FIX PERF ISSUE -->
+        <ClientOnly>
+            <NuxtMarkdown
+                :source="theme.markdown"
+                class="markdown-content"
+                :options="{ linkify: true, breaks: true, component: true }"
+            />
+        </ClientOnly>
         <Button
             size="lg"
             :href="`https://github.com/${theme.repoAuthor}/${theme.repoName}/releases/latest`"
