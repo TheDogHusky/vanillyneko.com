@@ -6,7 +6,7 @@
     <main class="container bg-dark min-h-10xl">
         <h1 class="font-6xl">Server Status</h1>
     </main>
-    <section class="container min-h-screen bg-secondary">
+    <section class="container min-h-screen bg-secondary vertical-no-center">
         <StatusEmbed />
     </section>
 </template>
