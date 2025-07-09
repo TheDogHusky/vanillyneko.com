@@ -3,7 +3,7 @@
         background-color: var(--color-white-300);
     }
     50% {
-        background-color: var(--color-white-400);
+        background-color: var(--color-white-500);
     }
     100% {
         background-color: var(--color-white-300);
@@ -13,7 +13,7 @@
 .skeleton {
     width: 100%;
     height: var(--size-md);
-    background-color: var(--color-skeleton-background);
+    background-color: var(--color-white-300);
     animation: skeleton-loading 1.5s infinite ease-in-out;
     border-radius: var(--border-radius-sm);
 }
