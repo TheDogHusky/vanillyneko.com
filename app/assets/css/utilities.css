@@ -83,6 +83,7 @@
 
 .min-h-10xl {
     min-height: 25rem;
+    height: unset;
 }
 
 /* Background Classes */
