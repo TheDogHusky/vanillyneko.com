@@ -81,6 +81,7 @@ onMounted(() => {
         class="container min-h-screen"
         :class="theme.backgroundClass"
     >
+        <!-- TODO fix the fact NuxtLink doesn't render properly (issue on github on nuxt markdown) -->
         <NuxtMarkdown
             :source="theme.markdown"
             class="markdown-content"
