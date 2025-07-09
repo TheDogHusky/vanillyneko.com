@@ -11,7 +11,7 @@ export default defineNuxtConfig({
         '~/assets/css/main.css'
     ],
 
-    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt'],
+    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', 'nuxt-markdown-render'],
 
     devServer: {
         host: '0.0.0.0',

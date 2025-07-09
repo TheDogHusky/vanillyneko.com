@@ -132,6 +132,18 @@
     --color-warning-800: var(--color-yellow-800);
     --color-warning-900: var(--color-yellow-900);
     --color-warning-950: var(--color-yellow-950);
+    --color-danger: var(--color-red-300); /* Danger color */
+    --color-danger-50: var(--color-red-50);
+    --color-danger-100: var(--color-red-100);
+    --color-danger-200: var(--color-red-200);
+    --color-danger-300: var(--color-red-300);
+    --color-danger-400: var(--color-red-400);
+    --color-danger-500: var(--color-red-500);
+    --color-danger-600: var(--color-red-600);
+    --color-danger-700: var(--color-red-700);
+    --color-danger-800: var(--color-red-800);
+    --color-danger-900: var(--color-red-900);
+    --color-danger-950: var(--color-red-950);
     --color-success: var(--color-success-300); /* Success color */
     --color-success-50: var(--color-green-50);
     --color-success-100: var(--color-green-100);

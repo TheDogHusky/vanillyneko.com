@@ -1,0 +1,18 @@
+.markdown-content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    min-height: 100%;
+    padding: var(--padding-md);
+    color: var(--color-text);
+    font-size: var(--font-size-lg);
+    text-align: left;
+    gap: var(--gap-md);
+    line-height: 1.6;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-sm);
+}
