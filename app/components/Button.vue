@@ -49,7 +49,6 @@ const buttonClasses = computed(() => {
         :class="buttonClasses"
         :aria-disabled="props.disabled"
         @click="handleClick"
-        :disabled="props.disabled"
         rel="noopener noreferrer"
     >
         <Icon v-if="props.icon" :name="props.icon" />
