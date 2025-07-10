@@ -12,6 +12,6 @@ const copyrightYear = new Date().getFullYear();
             <NuxtLink to="/contact">Contact Us</NuxtLink>
             <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
         </nav>
-        <p>&copy; {{ copyrightYear }} VanillyNeko. All rights reserved.</p>
+        <p>&copy; {{ copyrightYear }} VanillyNeko. All rights reserved. <NuxtLink to="/credits">Some content used deserve credit</NuxtLink>.</p>
     </footer>
 </template>
