@@ -1,0 +1,24 @@
+.art-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gap-md);
+    justify-content: center;
+    max-width: 75%;
+}
+
+.art-image-wrapper {
+    max-width: 300px;
+}
+
+.art-image {
+    width: 100%;
+    border-radius: var(--border-radius-md);
+    filter: drop-shadow(var(--shadow-md));
+    transform: scale(1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.art-image:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(var(--shadow-lg));
+}

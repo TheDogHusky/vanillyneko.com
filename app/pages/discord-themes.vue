@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import { parseMarkdown } from "@nuxtjs/mdc/runtime";
 import type { MDCParserResult } from "@nuxtjs/mdc/module";
+import { getBackgroundClass } from "~/utils/functions";
+import { themes } from "~/data/discordThemes";
 
 interface Theme {
     markdown: MDCParserResult;
@@ -9,19 +11,7 @@ interface Theme {
     backgroundClass: string;
 }
 
-const themes = ["https://github.com/VanillyNeko/Anya-bd", "https://github.com/VanillyNeko/Sailor-Moon-BD"];
 const content = ref<Theme[]>([]);
-
-const index = ref(0);
-
-const getBackgroundClass = (): string => {
-    const classes = [
-        "bg-secondary",
-        "bg-blue-100",
-        "bg-primary"
-    ];
-    return classes[index.value++ % classes.length] as string;
-};
 
 /**
  * Extracts the markdown URL and repository name from a GitHub link.
