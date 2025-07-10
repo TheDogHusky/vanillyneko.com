@@ -50,7 +50,7 @@ const toggleItems = () => {
             <div class="navbar-collapse">
                 <ul class="navbar-items">
                     <li>
-                        <NuxtLink to="/">Home</NuxtLink>
+                        <NuxtLink to="/"><span>Home</span></NuxtLink>
                     </li>
                     <li>
                         <Dropdown>

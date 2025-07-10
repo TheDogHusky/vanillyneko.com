@@ -76,6 +76,10 @@ header.scrolled > nav {
     font-size: var(--font-size-lg);
 }
 
+.navbar-items > li > a > span {
+    height: 22px;
+}
+
 .navbar-items .dropdown, .navbar-items .dropdown-trigger {
     height: 100%;
 }
