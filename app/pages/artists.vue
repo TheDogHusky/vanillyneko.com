@@ -11,7 +11,7 @@ import { backgroundClasses } from "~/utils/functions";
         v-for="(artist, i) in artists"
         :key="artist.name"
         class="container vertical-no-center min-h-screen"
-        :class="backgroundClasses[i]"
+        :class="backgroundClasses[i % backgroundClasses.length]"
     >
         <h2 class="font-6xl">{{ artist.name }}'s Art</h2>
         <div class="art-gallery">
