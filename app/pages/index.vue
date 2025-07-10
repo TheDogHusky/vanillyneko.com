@@ -4,6 +4,7 @@
 
 <template>
     <main class="center index">
+        <MainWallpaper />
         <h1 class="font-6xl">Welcome to the VanillyNeko Family!~</h1>
         <ScrollButton to="#content" />
     </main>

@@ -37,5 +37,13 @@ export default defineNuxtConfig({
         optimizeDeps: {
             include: ["debug"]
         }
+    },
+
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'en'
+            }
+        }
     }
 });
