@@ -13,7 +13,7 @@ export default defineNuxtConfig({
         '~/assets/css/main.css'
     ],
 
-    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc'],
+    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo'],
 
     devServer: {
         host: '0.0.0.0',
@@ -45,5 +45,17 @@ export default defineNuxtConfig({
                 lang: 'en'
             }
         }
+    },
+
+    site: {
+        name: 'VanillyNeko\'s website',
+        description: 'VanillyNeko is a variety streamer, cosplayer, content creator, coder, avatar creator and server host.',
+        url: 'https://vanillyneko.com',
+        image: '/img/logo.png',
+        defaultLocale: 'en'
+    },
+
+    ogImage: {
+        enabled: false
     }
 });

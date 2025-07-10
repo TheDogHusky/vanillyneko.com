@@ -11,7 +11,7 @@
     <section id="content" class="container min-h-screen bg-image bg-secondary-wallpaper">
         <h2 class="font-6xl">Who Am I?</h2>
         <p class="font-3xl w-3/4">
-            I'm a variety streamer, cosplayer, content creator, coder, avatar creator, server hosting and I'm super friendly and outgoing! <br/>
+            I'm a variety streamer, cosplayer, content creator, coder, avatar creator, server host and I'm super friendly and outgoing! <br/>
             I also take 3D print commissions! Just hit me up! <br/>
             I love my community and I love making friends! <br/>
             Have a look around and thank you so much for visiting me!
