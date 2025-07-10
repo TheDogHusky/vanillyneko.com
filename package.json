@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/icon": "1.15.0",
     "@nuxt/image": "1.10.0",
+    "@nuxtjs/mdc": "0.17.0",
     "@vueuse/nuxt": "13.5.0",
     "mobile-device-detect": "^0.4.3",
     "nuxt": "^3.17.6",
@@ -19,7 +20,5 @@
     "vue-router": "^4.5.1"
   },
   "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
-  "devDependencies": {
-    "nuxt-markdown-render": "^2.1.0"
-  }
+  "devDependencies": {}
 }

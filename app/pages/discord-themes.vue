@@ -1,6 +1,9 @@
 <script setup lang="ts">
+import { parseMarkdown } from "@nuxtjs/mdc/runtime";
+import type { MDCParserResult } from "@nuxtjs/mdc/module";
+
 interface Theme {
-    markdown: string;
+    markdown: MDCParserResult;
     repoName: string;
     repoAuthor: string;
     backgroundClass: string;
@@ -56,7 +59,9 @@ const fetchContent = async () => {
         const { markdown, repoName, repoAuthor, backgroundClass } = extractInformation(theme);
         try {
             const markdownContent = await getMarkdownContent(markdown);
-            content.value.push({ markdown: markdownContent, repoName, backgroundClass, repoAuthor });
+            // Parse the markdown content to HTML
+            const parsedContent = await parseMarkdown(markdownContent);
+            content.value.push({ markdown: parsedContent, repoName, backgroundClass, repoAuthor });
         } catch (error) {
             console.error(`Error fetching content for ${repoName}:`, error);
         }
@@ -79,14 +84,11 @@ onMounted(() => {
         class="container min-h-screen"
         :class="theme.backgroundClass"
     >
-        <!-- TODO fix the fact NuxtLink doesn't render properly (issue on github on nuxt markdown) AND FIX PERF ISSUE -->
-        <ClientOnly>
-            <NuxtMarkdown
-                :source="theme.markdown"
-                class="markdown-content"
-                :options="{ linkify: true, breaks: true, component: true }"
-            />
-        </ClientOnly>
+        <MDCRenderer
+            :body="theme.markdown.body"
+            :data="theme.markdown.data"
+            class="markdown-content"
+        />
         <Button
             size="lg"
             :href="`https://github.com/${theme.repoAuthor}/${theme.repoName}/releases/latest`"
@@ -98,7 +100,7 @@ onMounted(() => {
     </section>
     <section v-else class="container min-h-screen bg-secondary">
         <div class="markdown-content">
-            <Skeleton class="w-3/4" />
+            <Skeleton class="w-3/4" style="height: 2rem" />
             <hr class="separator discrete xs" />
             <Skeleton style="width: 40%;" />
             <Skeleton style="width: 45%;" />
