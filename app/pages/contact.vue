@@ -41,7 +41,7 @@
                         Owner: <code>@vanillyneko</code>
                     </li>
                     <li>
-                        Helpers: <code>@leighmagee</code>, <code>@theaxolotlsystem</code>
+                        Helper(s): <code>@leighmagee</code>
                     </li>
                 </ul>
             </div>
