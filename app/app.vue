@@ -2,7 +2,6 @@
 const runtimeConfig = useRuntimeConfig();
 const wallpaper = runtimeConfig.public.backgroundImage;
 
-// TODO add SEO and stuff
 // TODO add mobile support
 </script>
 

@@ -34,6 +34,7 @@ RUN yarn install --frozen-lockfile --production && yarn cache clean
 
 # Copy built application from builder stage
 COPY --from=builder /app/.output ./.output
+COPY --from=builder /app/nuxt.config.ts ./nuxt.config.ts
 
 # Create non-root user
 RUN addgroup -g 1001 -S nodejs
@@ -52,4 +53,4 @@ ENV NUXT_PORT=3000
 ENV NODE_ENV=production
 
 # Start the application
-CMD ["node", ".output/server/index.mjs"]
+CMD ["node", "--env-file=.env", ".output/server/index.mjs"]

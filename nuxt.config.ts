@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 
     runtimeConfig: {
         public: {
-            backgroundImage: process.env.BACKGROUND_IMAGE || '/img/background.jpg',
+            backgroundImage: '/img/background.jpg',
         }
     },
 
