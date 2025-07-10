@@ -1,0 +1,51 @@
+.bot-list {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-lg);
+    justify-content: center;
+    height: auto;
+    width: 100%;
+    flex-basis: auto;
+    flex-wrap: wrap;
+}
+
+.bot-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto;
+    gap: var(--gap-md);
+    max-width: 400px;
+    padding: var(--padding-md);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-md);
+    background-color: var(--color-primary-200);
+    color: var(--color-text);
+    font-size: var(--font-size-2xl);
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bot-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.bot-name {
+    font-size: var(--font-size-4xl);
+    font-weight: bold;
+    color: var(--color-primary-800);
+}
+
+.bot-description {
+    color: var(--color-text);
+}
+
+.bot-links {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-md);
+    justify-content: flex-start;
+    width: 100%;
+}
