@@ -24,6 +24,11 @@ export default defineNuxtConfig({
         highlight: {
             theme: 'github-light',
             langs: ['js', 'ts', 'html', 'css', 'json', 'bash']
+        },
+        components: {
+            map: {
+                img: 'ExternalImage'
+            }
         }
     },
 
