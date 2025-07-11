@@ -17,6 +17,8 @@ main {
     flex-direction: column;
     width: 100%;
     height: 100dvh;
+    padding: var(--padding-md);
+    text-align: center;
 }
 
 main.index {
