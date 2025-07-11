@@ -567,6 +567,13 @@
   dependencies:
     tslib "^2.4.0"
 
+"@iconify-json/material-symbols@^1.2.29":
+  version "1.2.29"
+  resolved "https://registry.yarnpkg.com/@iconify-json/material-symbols/-/material-symbols-1.2.29.tgz#c26e13a2b7a7da59b26f00edeb7e562ec6e5f604"
+  integrity sha512-UUSrsl0gHF0GjAB9eZOpXrj7/v55ayMzo3QnMwUqP/FSfSkITKLR7CsBmUIFS8eEj8eRTfBNWA1yiIJR6UOdWg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/collections@^1.0.563":
   version "1.0.566"
   resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.566.tgz#682771e221987faaca34f1f1bb16d1e69dda9041"
