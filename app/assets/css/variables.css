@@ -74,6 +74,7 @@
     --color-white: var(--color-white-50); /* White color */
     --color-white-50: #f6f6f7;
     --color-white-100: #f0f1f1;
+    --color-white-100-transparent: #f0f1f1cc;
     --color-white-200: #dee0e1;
     --color-white-300: #cfd2d4;
     --color-white-400: #bec1c4;

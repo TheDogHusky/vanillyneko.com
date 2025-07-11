@@ -17,13 +17,25 @@
 }
 
 .image-link:before {
-    content: url("https://api.iconify.design/majesticons/open.svg?color=f0f1f1");
+    content: url("https://api.iconify.design/majesticons/open.svg?color=currentColor");
     position: absolute;
     top: var(--spacing-md);
     right: var(--spacing-md);
-    color: var(--color-white-100);
+    color: var(--color-black-900);
     width: var(--size-2xl);
     height: var(--size-2xl);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-white-100-transparent);
+    border-radius: .25rem;
+    opacity: 0;
+    transition: opacity var(--transition-duration-fast) var(--transition-timing-function);
+}
+
+.image-link:hover:before {
+    opacity: 1;
 }
 
 /* Font Classes */
@@ -886,5 +898,9 @@
 
     .font-sm {
         font-size: var(--font-size-2xs);
+    }
+
+    .image-link:before {
+        opacity: 1;
     }
 }
