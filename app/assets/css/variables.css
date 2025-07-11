@@ -175,6 +175,7 @@
     --base-font-size: 16px; /* Base font size */
 
     /* Sizes */
+    --size-2xs: 0.125rem; /* 2px */
     --size-xs: 0.25rem; /* 4px */
     --size-sm: 0.5rem; /* 8px */
     --size-md: 0.75rem; /* 12px */
@@ -229,6 +230,7 @@
     --font-family-sans: 'Inter', sans-serif;
     --font-family-serif: 'Merriweather', serif;
     --font-family-mono: 'Courier New', monospace;
+    --font-size-2xs: 0.625rem; /* 10px */
     --font-size-xs: 0.75rem; /* 12px */
     --font-size-sm: 0.875rem; /* 14px */
     --font-size-md: 1rem; /* 16px */
