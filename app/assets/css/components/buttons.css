@@ -137,3 +137,29 @@
     --btn-padding: var(--padding-md) var(--padding-lg);
     --btn-font-size: var(--font-size-lg);
 }
+
+/* Mobile styles */
+
+@media (max-width: 768px) {
+    .scroll-button {
+        width: var(--size-2xl);
+        height: var(--size-2xl);
+        font-size: var(--font-size-3xl);
+    }
+
+    .btn {
+        --btn-padding: var(--padding-xs) var(--padding-sm);
+        --btn-font-size: var(--font-size-sm);
+    }
+
+    .btn-icon {
+        width: var(--size-2xl);
+        height: var(--size-2xl);
+        font-size: var(--font-size-lg);
+    }
+
+    .btn-lg {
+        --btn-padding: var(--padding-md) var(--padding-lg);
+        --btn-font-size: var(--font-size-md);
+    }
+}
