@@ -21,3 +21,16 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+/* Mobile styles */
+
+@media (max-width: 768px) {
+    footer {
+        padding: var(--padding-md);
+        font-size: var(--font-size-xs);
+    }
+
+    .footer-links {
+        gap: var(--gap-md);
+    }
+}
