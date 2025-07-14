@@ -15,3 +15,17 @@
 .privacy-embed {
     padding: var(--padding-lg);
 }
+
+/* Mobile styles */
+
+@media (max-width: 768px) {
+    .status-embeds {
+        width: 100%;
+    }
+    .status-embed {
+        width: 100%;
+    }
+    .privacy-embed {
+        padding: var(--padding-md);
+    }
+}

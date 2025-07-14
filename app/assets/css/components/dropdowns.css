@@ -253,4 +253,8 @@ header.scrolled .dropdown-trigger:hover {
     .sub-dropdown-trigger {
         flex-direction: row-reverse;
     }
+
+    .dropdown:hover .dropdown-trigger:not(.active) > span.iconify {
+        transform: rotate(0);
+    }
 }
