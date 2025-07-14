@@ -8,7 +8,7 @@ const wallpaper = runtimeConfig.public.backgroundImage;
 <template>
     <div :style="{ '--background-image': 'url(\'' + wallpaper + '\');' }">
         <Header />
-        <NuxtLoadingIndicator />
+        <NuxtLoadingIndicator :height="2" color="#ef9999" />
         <NuxtPage />
         <Footer />
     </div>
