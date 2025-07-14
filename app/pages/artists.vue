@@ -10,7 +10,7 @@ import { backgroundClasses } from "~/utils/functions";
     <section
         v-for="(artist, i) in artists"
         :key="artist.name"
-        class="container vertical-no-center min-h-screen"
+        class="container vertical-no-center min-h-screen gap-md"
         :class="backgroundClasses[i % backgroundClasses.length]"
     >
         <h2 class="font-6xl">{{ artist.name }}'s Art</h2>
@@ -20,7 +20,7 @@ import { backgroundClasses } from "~/utils/functions";
                 v-for="(art, j) in artist.artwork"
                 :key="j"
             >
-                <img
+                <Image
                     :src="art as string"
                     :alt="`${artist.name}'s artwork ${j + 1}`"
                     class="art-image"

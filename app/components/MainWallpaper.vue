@@ -5,7 +5,7 @@ const wallpaper = runtimeConfig.public.backgroundImage;
 
 <template>
     <div class="main-wallpaper">
-        <NuxtImg
+        <Image
             :src="wallpaper"
             alt="Main Wallpaper"
             loading="lazy"

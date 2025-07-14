@@ -43,7 +43,7 @@ const toggleItems = () => {
                     </svg>
                 </div>
                 <NuxtLink to="/" class="navbar-brand">
-                    <NuxtImg src="/img/logo.png" alt="VanillyNeko Logo" />
+                    <Image src="/img/logo.png" alt="VanillyNeko Logo" />
                     <span>VanillyNeko</span>
                 </NuxtLink>
             </div>
