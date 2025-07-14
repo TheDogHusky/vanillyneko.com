@@ -1,6 +1,8 @@
 <script setup lang="ts">
+import { isMobile } from 'mobile-device-detect';
+
 const dropdownContent = ref<HTMLElement | null>(null);
-const active = ref(false)
+const active = ref(false);
 
 function adjustDropdownPosition() {
     if (!dropdownContent.value) return;
@@ -11,6 +13,11 @@ function adjustDropdownPosition() {
     } else {
         dropdownContent.value.classList.remove('right');
     }
+}
+
+function toggleDropdown() {
+    if (isMobile) active.value = !active.value;
+    else active.value = false;
 }
 
 onMounted(() => {
@@ -25,7 +32,7 @@ onBeforeUnmount(() => {
 
 <template>
     <div class="dropdown" :class="{ active }">
-        <button class="dropdown-trigger" @click="active = !active" :class="{ active }">
+        <button class="dropdown-trigger" @click="toggleDropdown" :class="{ active }">
             <slot name="trigger"></slot>
             <Icon name="material-symbols:keyboard-arrow-down-rounded" class="font-xl" />
         </button>
