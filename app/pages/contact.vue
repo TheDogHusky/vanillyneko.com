@@ -6,7 +6,7 @@
     <main class="container bg-dark min-h-10xl">
         <h1 class="font-6xl">Contact Information</h1>
     </main>
-    <section class="bg-image bg-secondary-wallpaper min-h-screen container font-2xl gap-2xl">
+    <section class="bg-image bg-secondary-wallpaper min-h-section container font-2xl gap-2xl">
         <h2 class="font-5xl">Get in Touch with Us</h2>
         <div class="contact-list">
             <div class="contact-info">
