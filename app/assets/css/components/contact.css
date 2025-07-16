@@ -31,4 +31,12 @@
     padding: 0;
     margin: 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info:nth-child(0) li {
+    width: min-content;
 }
