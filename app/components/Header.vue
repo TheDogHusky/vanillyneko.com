@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const active = ref(false);
+const route = useRoute();
+
 function updadeHeaderColor() {
     const header = document.querySelector('header');
     if (header) {
@@ -20,20 +23,19 @@ onBeforeUnmount(() => {
 });
 
 const toggleItems = () => {
-    const items = document.querySelector('.navbar-collapse');
-    const navbarToggle = document.querySelector('.navbar-toggle-wrapper');
-    if (items && navbarToggle) {
-        items.classList.toggle('active');
-        navbarToggle.classList.toggle('active');
-    }
+    active.value = !active.value;
 };
+
+watch(() => route.path, () => {
+    active.value = false;
+});
 </script>
 
 <template>
     <header>
         <nav class="navbar">
             <div class="navbar-left">
-                <div class="navbar-toggle-wrapper" @click="toggleItems">
+                <div class="navbar-toggle-wrapper" :class="{ active }" @click="toggleItems">
                     <svg class="navbar-toggle" viewBox="0 0 24 24" stroke="currentColor" focusable="false">
                         <g transform="translate(12,12)">
                             <path class="navbar-toggle-line-1" d="M-9 -5 L9 -5" fill="none" stroke-width="2"></path>
@@ -47,7 +49,7 @@ const toggleItems = () => {
                     <span>VanillyNeko</span>
                 </NuxtLink>
             </div>
-            <div class="navbar-collapse">
+            <div class="navbar-collapse" :class="{ active }">
                 <ul class="navbar-items">
                     <li>
                         <NuxtLink to="/"><span>Home</span></NuxtLink>
