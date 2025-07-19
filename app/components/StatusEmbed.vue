@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
 useHead({
   script: [
     {
@@ -7,12 +8,17 @@ useHead({
   ]
 });
 
-// Defer iframe resize init to client-side after component is mounted
 onMounted(() => {
-  // Only initialize iframeResizer for HetrixTools embeds
-  const hetrixFrames = document.querySelectorAll(".htframe");
-  hetrixFrames.forEach((frame) => {
-    iFrameResize({ log: false, checkOrigin: false }, frame);
+  // Initialize iframeResizer for all iframes
+  const frames = document.querySelectorAll(".htframe, .kuma-frame");
+  frames.forEach((frame) => {
+    iFrameResize({ 
+      log: false, 
+      checkOrigin: false, 
+      sizeWidth: true, // Allow width to adjust dynamically
+      heightCalculationMethod: 'bodyScroll', // Use content's scroll height
+      widthCalculationMethod: 'bodyScroll' // Use content's scroll width
+    }, frame);
   });
 });
 </script>
@@ -37,9 +43,9 @@ onMounted(() => {
         class="kuma-frame"
         src="https://up.vnil.me/status/all/"
         width="100%"
-        height="800"
+        scrolling="no"
         style="border: none;"
-        sandbox="allow-scripts allow-same-origin allow-popups"
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-modals"
       ></iframe>
     </div>
   </div>
@@ -65,6 +71,7 @@ const hetrixUrls = [
   width: 100%;
   border-radius: 1rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Prevent scrollbars */
 }
 
 /* Optional blur background effect */
