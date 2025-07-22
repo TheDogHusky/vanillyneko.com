@@ -22,5 +22,8 @@ useHead({
         <div class="status-embed">
             <iframe class="htframe" src="https://up.vnil.me/status/all/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
         </div>
+        <div class="status-embed">
+            <iframe class="htframe" src="https://vanillyneko.com/kuma-wrapper?kuma=https://up.vnil.me/status/all/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{ log: false }], '.htframe')"></iframe>
+        </div>
     </div>
 </template>
