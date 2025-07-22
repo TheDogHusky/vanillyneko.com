@@ -20,10 +20,7 @@ useHead({
             <iframe class="htframe" src="https://wl.hetrixtools.com/r/a5f8401602b66cca155352d862dc7826/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
         </div>
         <div class="status-embed">
-            <iframe class="htframe" src="https://up.vnil.me/status/all/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{log:false}],'.htframe')"></iframe>
-        </div>
-        <div class="status-embed">
-            <iframe class="htframe" src="https://vanillyneko.com/kuma-wrapper?kuma=https://up.vnil.me/status/all/" width="100%" scrolling="no" style="border:none;" sandbox="allow-scripts allow-same-origin allow-popups" onload="iFrameResize([{ log: false }], '.htframe')"></iframe>
+            <iframe src="https://up.vnil.me/status/all/" width="100%" height="3000" style="border: none;"></iframe>
         </div>
     </div>
 </template>
