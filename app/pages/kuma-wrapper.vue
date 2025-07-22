@@ -11,7 +11,8 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useHead } from '#imports'
 
 const kumaURL = ref('https://up.vnil.me/status/all/')
 
@@ -22,9 +23,14 @@ onMounted(() => {
     kumaURL.value = urlParam
   }
 })
-</script>
 
-<!-- Load iframe resizer content script -->
-<!-- This makes this wrapper responsive to outer iFrame resizing -->
-<!-- This runs INSIDE the wrapper -->
-<script src="https://stttc.b-cdn.net/iframeResizer/iframeResizer.contentWindow.min.js"></script>
+// ✅ Load iframeResizer.contentWindow.min.js into <head>
+useHead({
+  script: [
+    {
+      src: 'https://stttc.b-cdn.net/iframeResizer/iframeResizer.contentWindow.min.js',
+      tagPosition: 'head', // optional, just to be explicit
+    }
+  ]
+})
+</script>
