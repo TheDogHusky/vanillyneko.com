@@ -2,6 +2,7 @@
   "name": "nuxt-app",
   "private": true,
   "type": "module",
+  "license": "GPL-3.0-or-later",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,6 +11,8 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@iframe-resizer/child": "^5.4.7",
+    "@iframe-resizer/vue": "^5.4.7",
     "@nuxt/icon": "1.15.0",
     "@nuxt/image": "1.10.0",
     "@nuxtjs/mdc": "0.17.0",
@@ -23,6 +26,7 @@
   },
   "packageManager": "yarn@1.22.22",
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.2.29"
+    "@iconify-json/material-symbols": "^1.2.29",
+    "@types/iframe-resizer": "^4.0.0"
   }
 }

@@ -607,6 +607,28 @@
   dependencies:
     "@iconify/types" "^2.0.0"
 
+"@iframe-resizer/child@^5.4.7":
+  version "5.4.7"
+  resolved "https://registry.yarnpkg.com/@iframe-resizer/child/-/child-5.4.7.tgz#6ebd4e85698651486da33d944d7d9ffc8f411643"
+  integrity sha512-dROsfovVx3EBsHFQhZNfI36HSCRWaXYeWfbnt2tl6AGm9qmzHKulIpVluJRpbJ7rv9Va8EGbycLtEhuqvXVufg==
+  dependencies:
+    auto-console-group "1.2.9"
+
+"@iframe-resizer/core@5.4.7":
+  version "5.4.7"
+  resolved "https://registry.yarnpkg.com/@iframe-resizer/core/-/core-5.4.7.tgz#cd78c73a0e708a1b018a6b68cfc1c18931b91389"
+  integrity sha512-fDHq6r1FYX9f3BduPqtJC/1ZqtEec6PFxEysqCI0UxM9D28iHll9UryiP6vXJuUBuF06aRh2b9bTXlYgZLqR+w==
+  dependencies:
+    auto-console-group "1.2.9"
+
+"@iframe-resizer/vue@^5.4.7":
+  version "5.4.7"
+  resolved "https://registry.yarnpkg.com/@iframe-resizer/vue/-/vue-5.4.7.tgz#632be853dcd877906b9c20a1d063ed2c79ba38a2"
+  integrity sha512-LhRx9EpMm17Haq9ZPEfF9+gZMyevCdd1GL5BoVCky70UAlEpxqMXMupX7EOTqYFldbYyKXZEpPmzAeRKyewb4g==
+  dependencies:
+    "@iframe-resizer/core" "5.4.7"
+    auto-console-group "1.2.9"
+
 "@ioredis/commands@^1.1.1":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@ioredis/commands/-/commands-1.2.0.tgz#6d61b3097470af1fdbbe622795b8921d42018e11"
@@ -2041,6 +2063,11 @@
   dependencies:
     "@types/unist" "*"
 
+"@types/iframe-resizer@^4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@types/iframe-resizer/-/iframe-resizer-4.0.0.tgz#f56ae00d0b14e724c15daedd1e6cada478504eea"
+  integrity sha512-RKrT4goNVtqZvf9WPkV0cUcphQWXzLVW1IE4yOIY21c1W+obJJbcHFD1lQu5ncNHm/6TeQSeedVf9bmkx2NaGQ==
+
 "@types/mdast@^4.0.0", "@types/mdast@^4.0.4":
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/@types/mdast/-/mdast-4.0.4.tgz#7ccf72edd2f1aa7dd3437e180c64373585804dd6"
@@ -2605,6 +2632,11 @@ async@^3.2.3, async@^3.2.4:
   version "3.2.6"
   resolved "https://registry.yarnpkg.com/async/-/async-3.2.6.tgz#1b0728e14929d51b85b449b7f06e27c1145e38ce"
   integrity sha512-htCUDlxyyCLMgaM3xXg0C0LW2xqfuQ6p05pCEIsXuyQ+a1koYKTuBMzRNwmybfLgvJDMd0r1LTn4+E0Ti6C2AA==
+
+auto-console-group@1.2.9:
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/auto-console-group/-/auto-console-group-1.2.9.tgz#a3ccc1befcc23e10866d0c1ce456d769c305b803"
+  integrity sha512-YGJqZByv1SFIq8viTpKFmI0eNHIoa9hllKP3487VbIN4zjRcsKKoouu2TiQ189oscvwCSKTndfAe6wf6izbSMA==
 
 autoprefixer@^10.4.21:
   version "10.4.21"

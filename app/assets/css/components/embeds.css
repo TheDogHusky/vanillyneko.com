@@ -12,6 +12,11 @@
     width: 100%;
 }
 
+.status-embed iframe {
+    border: none;
+    border-radius: var(--border-radius-md);
+}
+
 .privacy-embed {
     padding: var(--padding-lg);
 }
