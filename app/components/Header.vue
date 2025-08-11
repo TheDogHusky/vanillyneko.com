@@ -170,7 +170,7 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://www.tiktok.com/@vanillyneko">Tiktok</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://www.twitch.tv/vanillyneko">Tswitch</a>
+                                <a target="_blank" href="https://www.twitch.tv/vanillyneko">Twitch</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://x.com/vanillyneko">X</a>
