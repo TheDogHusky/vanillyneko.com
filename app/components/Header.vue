@@ -74,6 +74,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>Stripe Donation</span>
                                     </template>
+                                    
 
                                     <li>
                                         <a target="_blank" href="https://buy.stripe.com/5kAeUU0W9dL39e8bIM">5$ Monthly</a>
@@ -133,6 +134,9 @@ watch(() => route.path, () => {
                                 <span>Socials</span>
                             </template>
 
+                            <li>
+                                <a target="_blank" href="https://bsky.app/profile/vanillyneko.bsky.social">Bluesky</a>
+                            </li>
                             <li>
                                 <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord</a>
                             </li>
