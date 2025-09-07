@@ -286,6 +286,17 @@ watch(() => route.path, () => {
                     <li>
                         <Dropdown>
                             <template #trigger>
+                                <span>Extra Info</span>
+                            </template>
+
+                            <li>
+                                <a target="_blank" href="https://docs.google.com/document/d/1VBMstoR9kDFxgQbyi_ZLOJ5_kriX98jv/edit?usp=sharing&ouid=103792036069402227180&rtpof=true&sd=true">Cosplay List</a>
+                            </li>
+                        </Dropdown>
+                    </li>
+                    <li>
+                        <Dropdown>
+                            <template #trigger>
                                 <span>Contact Us</span>
                             </template>
 
