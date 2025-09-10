@@ -34,6 +34,7 @@ import IframeResizer from '@iframe-resizer/vue/sfc';
                 <IframeResizer
                     src="https://up.vnil.me/status/all/"
                     width="100%"
+                    height="1800px"
                     license="GPLv3"
                 ></IframeResizer>
             </div>
