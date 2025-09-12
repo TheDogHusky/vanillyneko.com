@@ -126,6 +126,9 @@ watch(() => route.path, () => {
                             <li>
                                 <a target="_blank" href="https://billing.stripe.com/p/login/6oE6px2Zwe6v2QwaEE">Manage Stripe Billing</a>
                             </li>
+                            <li>
+                                <a target="_blank" href="https://venmo.com/u/VanillyNeko">Venmo</a>
+                            </li>
                         </Dropdown>
                     </li>
                     <li>
