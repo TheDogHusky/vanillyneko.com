@@ -11,9 +11,13 @@
     <section id="content" class="container min-h-screen bg-image bg-secondary-wallpaper">
         <h2 class="font-6xl">Who Am I?</h2>
         <p class="font-4xl w-3/4">
-            I'm a variety streamer, cosplayer, content creator, coder, avatar creator, server host and I'm super friendly and outgoing! <br/>
-            I also take 3D print commissions! Just hit me up! <br/>
+            I'm a variety streamer (sometimes), cosplayer, kigurumi, content creator, coder, avatar creator (sometimes) and server host! <br/>
+            I'm super friendly and outgoing and easy to get along with! <br/>
+            I also take 3D print commissions! <NuxtLink to="/contact">Just hit me up!</NuxtLink> <br/>
             I love my community and I love making friends! <br/>
+            We are very open to new people and I'm always looking for new people to join my community! <br/>
+            I also help out over at <a target="_blank" href="https://discord.gg/32x2323">Folium Hosting</a>! <br/>
+            Make sure to check them out! <br/>
             Have a look around and thank you so much for visiting me!
         </p>
     </section>
@@ -107,7 +111,7 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">Router</span>: Unifi Dream Machine Pro w/U6-LR AP + others
+                <span class="font-bold">Router</span>: Unifi Dream Machine Pro SE w/U6-LR AP + Unifi Dream Machine Pro + Unifi Dream Router
             </p>
         </li>
         <li>
