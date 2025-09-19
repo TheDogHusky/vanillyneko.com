@@ -67,6 +67,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://cash.app/$VanillyNeko">Cashapp</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://vanillyneko.gumroad.com/coffee">Gumroad</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
                             </li>
                             <li>
@@ -128,9 +131,6 @@ watch(() => route.path, () => {
                             </li>
                             <li>
                                 <a target="_blank" href="https://venmo.com/u/VanillyNeko">Venmo</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.vanillyneko.com/img/zelle_chase.png">Zelle</a>
                             </li>
                         </Dropdown>
                     </li>
