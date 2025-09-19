@@ -6,7 +6,7 @@
     <main class="container bg-dark min-h-10xl">
         <h1 class="font-6xl">Contact Information</h1>
     </main>
-    <section class="bg-image bg-secondary-wallpaper min-h-section container font-2xl gap-2xl">
+    <section class="bg-image bg-tertiary-wallpaper min-h-section container font-2xl gap-2xl">
         <h2 class="font-5xl">Get in Touch with Us</h2>
         <div class="contact-list">
             <div class="contact-info">
@@ -29,7 +29,7 @@
                         Phone: <a href="tel:+13048079093">+1 (304) 807-9093</a>
                     </li>
                     <li>
-                        Fax: <a href="tel:+13044100334">1 (304) 410-0334</a>
+                        Fax: <a href="tel:+16812344457">+1 (681) 234-4457</a>
                     </li>
                 </ul>
             </div>
@@ -38,10 +38,10 @@
                 <h2 class="font-4xl">Discord</h2>
                 <ul>
                     <li>
-                        Owner: <code>@vanillyneko</code>
+                        Owner: <br> <code>@vanillyneko</code>
                     </li>
                     <li>
-                        Helper(s): <code>@leighmagee</code>
+                        Helper(s): <br> <code>@leighmagee</code> (Support) <br> <code>@classy.craft3r</code> (Site Development) <br> <code>@mommakat.</code> (Support) <br> <code>@gradius802</code> (Support/Provider)
                     </li>
                 </ul>
             </div>
