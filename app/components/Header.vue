@@ -73,6 +73,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://ko-fi.com/vanillyneko">Ko-Fi</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://patreon.com/vanillyneko?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Patreon</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
                             </li>
                             <li>
