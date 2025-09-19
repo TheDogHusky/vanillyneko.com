@@ -144,7 +144,10 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://www.facebook.com/vanillyneko">Facebook</a>
+                                <a target="_blank" href="https://www.facebook.com/vanillyneko">Facebook Page</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://giphy.com/channel/vanillyneko">Giphy</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://github.com/VanillyNeko">GitHub (organization)</a>
@@ -174,19 +177,22 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://steamcommunity.com/id/VanillyNeko/">Steam</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://tenor.com/users/vanillyneko">Tenor</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.tiktok.com/@vanillyneko">Tiktok</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.twitch.tv/vanillyneko">Twitch</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://x.com/vanillyneko">X</a>
+                                <a target="_blank" href="https://x.com/vanillyneko">Twitter/X</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://vrchat.com/home/user/usr_79f2acb3-46b6-4a0d-a54f-af8211b16188">VRChat</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://www.youtube.com/channel/UCrwsis2ntdanRu5Aqi0ya6Q">YouTube</a>
+                                <a target="_blank" href="https://www.youtube.com/@vanillyneko">YouTube</a>
                             </li>
                         </Dropdown>
                     </li>
