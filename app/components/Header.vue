@@ -127,10 +127,10 @@ watch(() => route.path, () => {
                                     <li>
                                         <a target="_blank" href="https://buy.stripe.com/8wM4gg5cp9uN4XS7sJ">75$ Monthly</a>
                                     </li>
+                                    <li>
+                                        <a target="_blank" href="https://billing.stripe.com/p/login/6oE6px2Zwe6v2QwaEE">Manage Stripe Billing</a>
+                                    </li>
                                 </SubDropdown>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://billing.stripe.com/p/login/6oE6px2Zwe6v2QwaEE">Manage Stripe Billing</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://venmo.com/u/VanillyNeko">Venmo</a>
@@ -237,7 +237,7 @@ watch(() => route.path, () => {
                                         <span>File Sharing Services</span>
                                     </template>
                                     <li>
-                                        <a target="_blank" href="https://vnil.me/">Public Chibisafe/File Share Service</a>
+                                        <a target="_blank" href="https://vnil.me/">Public Chibisafe <br> File Share Service</a>
                                     </li>
                                 </SubDropdown>
                             </li>
@@ -263,7 +263,7 @@ watch(() => route.path, () => {
                                         <span>Sequenzia Things</span>
                                     </template>
                                     <li>
-                                        <a target="_blank" href="https://app.vnil.me/ambient?displayname=Untitled">Ambient</a>
+                                        <a target="_blank" href="https://app.vnil.me/ambient?displayname=Untitled">Ambient Display</a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="https://app.vnil.me/">Sequenzia</a>
