@@ -237,7 +237,7 @@ watch(() => route.path, () => {
                                         <span>File Sharing Services</span>
                                     </template>
                                     <li>
-                                        <a target="_blank" href="https://vnil.me/">Public Chibisafe</a>
+                                        <a target="_blank" href="https://vnil.me/">Public Chibisafe/File Share Service</a>
                                     </li>
                                 </SubDropdown>
                             </li>
@@ -263,7 +263,7 @@ watch(() => route.path, () => {
                                         <span>Sequenzia Things</span>
                                     </template>
                                     <li>
-                                        <a target="_blank" href="https://app.vnil.me/device-login">Ambient</a>
+                                        <a target="_blank" href="https://app.vnil.me/ambient?displayname=Untitled">Ambient</a>
                                     </li>
                                     <li>
                                         <a target="_blank" href="https://app.vnil.me/">Sequenzia</a>
