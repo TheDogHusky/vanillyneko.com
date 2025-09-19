@@ -70,6 +70,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://vanillyneko.gumroad.com/coffee">Gumroad</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://ko-fi.com/vanillyneko">Ko-Fi</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
                             </li>
                             <li>
