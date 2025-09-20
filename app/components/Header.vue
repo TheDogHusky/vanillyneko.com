@@ -79,6 +79,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://square.link/u/bbw2h7Sk">Square</a>
+                            </li>
+                            <li>
                                 <SubDropdown>
                                     <template #trigger>
                                         <span>Stripe Donation</span>
