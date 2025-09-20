@@ -150,7 +150,7 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://bsky.app/profile/vanillyneko.bsky.social">Bluesky</a>
                             </li>
                             <li>
-                                <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord</a>
+                                <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord Server</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.facebook.com/vanillyneko">Facebook Page</a>
