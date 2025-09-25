@@ -197,7 +197,7 @@
     gap: var(--gap-4xl);
 }
 
-/* Background Classes */
+/* Background Classes/Image Components */
 
 .bg-image {
     background-size: cover;
