@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# Deployment script for vanillyneko.com
+
+set -e
+
+echo "🚀 Starting deployment..."
+
+# Build Docker image
+echo "📦 Building Docker image..."
+docker build -t vanillyneko-app .
+
+# Stop existing container if running
+echo "🛑 Stopping existing container..."
+docker stop vanillyneko-app 2>/dev/null || true
+docker rm vanillyneko-app 2>/dev/null || true
+
+# Run new container
+echo "▶️  Starting new container..."
+docker run -d \
+  --name vanillyneko-app \
+  --restart unless-stopped \
+  -p 3000:3000 \
+  vanillyneko-app
+
+echo "✅ Deployment complete!"
+echo "🌐 Application available at: http://$(hostname -I | awk '{print $1}'):3000"
+
+# Show container status
+echo "📊 Container status:"
+docker ps | grep vanillyneko-app
