@@ -255,6 +255,9 @@ watch(() => route.path, () => {
                                     <li>
                                         <a target="_blank" href="https://app.plex.tv/">Plex (watch)</a>
                                     </li>
+                                    <li>
+                                        <a target="_blank" href="https://emi.vnil.me/j/WEBSITE">Plex Invite (Free Use)</a>
+                                    </li>
                                 </SubDropdown>
                             </li>
                             <li>
