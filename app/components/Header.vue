@@ -153,6 +153,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord Server</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://www.facebook.com/ellie.lane.399488/">Facebook (Personal)</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.facebook.com/vanillyneko">Facebook Page</a>
                             </li>
                             <li>
