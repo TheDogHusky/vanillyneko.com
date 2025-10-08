@@ -174,6 +174,19 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://www.instagram.com/vanillyneko/">Instagram</a>
                             </li>
                             <li>
+                              <SubDropdown>
+                                  <template #trigger>
+                                    <span>Kigurumi Servers</span>
+                                  </template>
+                                <li>
+                                  <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
+                                </li>
+                                <li>
+                                  <a target="_blank" href="https://discord.gg/XKfa9H5xUq">Kigurumi Shrine</a>
+                                </li>
+                              </SubDropdown>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.facebook.com/vanillyneko">History</a>
                             </li>
                             <li>
