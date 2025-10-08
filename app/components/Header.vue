@@ -141,6 +141,45 @@ watch(() => route.path, () => {
                         </Dropdown>
                     </li>
                     <li>
+                        <dropdown>
+                            <template #trigger>
+                                <span>Kigu Resources</span>
+                            </template>
+                          <li>
+                            <SubDropdown>
+                              <template #trigger>
+                                <span>Kigurumi Servers</span>
+                              </template>
+                              <li>
+                                <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://discord.gg/XKfa9H5xUq">Kigurumi Shrine</a>
+                              </li>
+                            </SubDropdown>
+                          </li>
+                          <li>
+                            <SubDropdown>
+                              <template #trigger>
+                                <span>Kigu Sites/Resources/<br>Creators</span>
+                              </template>
+                              <li>
+                                <a target="_blank" href="https://blackcatkig.com/">Black Cat Kig (Maker)</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://damekigurumi.com/Home">DameKigu (Maker)</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://kigguide.com/">Kig Guide (Info)</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://www.etsy.com/shop/KigurumiSenseiStore">JSensei (Creator)</a>
+                              </li>
+                            </SubDropdown>
+                          </li>
+                        </dropdown>
+                    </li>
+                    <li>
                         <Dropdown>
                             <template #trigger>
                                 <span>Socials</span>
@@ -172,19 +211,6 @@ watch(() => route.path, () => {
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.instagram.com/vanillyneko/">Instagram</a>
-                            </li>
-                            <li>
-                              <SubDropdown>
-                                  <template #trigger>
-                                    <span>Kigurumi Servers</span>
-                                  </template>
-                                <li>
-                                  <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
-                                </li>
-                                <li>
-                                  <a target="_blank" href="https://discord.gg/XKfa9H5xUq">Kigurumi Shrine</a>
-                                </li>
-                              </SubDropdown>
                             </li>
                             <li>
                                 <a target="_blank" href="https://www.facebook.com/vanillyneko">History</a>
