@@ -154,7 +154,7 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://discord.gg/XKfa9H5xUq">Kigurumi Shrine</a>
+                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>
                               </li>
                             </SubDropdown>
                           </li>
