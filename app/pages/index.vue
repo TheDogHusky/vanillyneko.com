@@ -16,7 +16,7 @@
             I also take 3D print commissions! <NuxtLink to="/contact">Just hit me up!</NuxtLink> <br/>
             I love my community and I love making friends! <br/>
             We are very open to new people and I'm always looking for new people to join my community! <br/>
-            I also help out over at <a target="_blank" href="https://foliumhosting.net">Folium Hosting</a>! <br/>
+            I also help out over at <a target="_blank" href="https://foliumhosting.net/r/vanillyneko">Folium Hosting</a>! <br/>
             Make sure to check them out! <br/>
             Have a look around and thank you so much for visiting me!
         </p>
