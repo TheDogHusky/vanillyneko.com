@@ -64,6 +64,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://www.amazon.com/hz/wishlist/ls/15EGTSWVHZJHX?ref_=wl_share">Amazon Wishlist</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://buymeacoffee.com/vanillyneko">BuyMeACoffee</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://cash.app/$VanillyNeko">Cashapp</a>
                             </li>
                             <li>
@@ -71,6 +74,9 @@ watch(() => route.path, () => {
                             </li>
                             <li>
                                 <a target="_blank" href="https://ko-fi.com/vanillyneko">Ko-Fi</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://liberapay.com/vanillyneko/">LiberaPay</a>
                             </li>
                             <li>
                                 <a target="_blank" href="https://patreon.com/vanillyneko?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Patreon</a>
