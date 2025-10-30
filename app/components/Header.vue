@@ -168,6 +168,12 @@ watch(() => route.path, () => {
                               <li>
                                 <a target="_blank" href="https://discord.gg/hTq5Z5ueav">Neko Nico's <br> Litterbox</a>
                               </li>
+                              <li>
+                                <a target="_blank" href="https://discord.gg/kigurumi">Rumi Aida's <br> Comfy Crew</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://discord.com/invite/p2u7xPN">The Animegao <br> Circle</a>
+                              </li>
                             </SubDropdown>
                           </li>
                           <li>
