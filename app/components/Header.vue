@@ -144,6 +144,9 @@ watch(() => route.path, () => {
                             <li>
                                 <a target="_blank" href="https://venmo.com/u/VanillyNeko">Venmo</a>
                             </li>
+                            <li>
+                                <NuxtLink to="/zelle">Zelle</NuxtLink>
+                            </li>
                         </Dropdown>
                     </li>
                     <li>
