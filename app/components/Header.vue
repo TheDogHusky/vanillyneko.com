@@ -162,9 +162,9 @@ watch(() => route.path, () => {
                               <li>
                                 <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
                               </li>
-                              <li>
-                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>
-                              </li>
+<!--                              <li>-->
+<!--                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>-->
+<!--                              </li>-->
                               <li>
                                 <a target="_blank" href="https://discord.gg/hTq5Z5ueav">Neko Nico's <br> Litterbox</a>
                               </li>
