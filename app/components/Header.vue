@@ -89,7 +89,6 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>Stripe Donation</span>
                                     </template>
-                                    
 
                                     <li>
                                         <a target="_blank" href="https://buy.stripe.com/5kAeUU0W9dL39e8bIM">5$ Monthly</a>
@@ -159,20 +158,21 @@ watch(() => route.path, () => {
                               <template #trigger>
                                 <span>Kigurumi Servers</span>
                               </template>
+
                               <li>
                                 <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>-->
+                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://discord.gg/hTq5Z5ueav">Neko Nico's <br> Litterbox</a>
+                                <a target="_blank" href="https://discord.gg/hTq5Z5ueav">Neko Nico's Litterbox</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://discord.gg/kigurumi">Rumi Aida's <br> Comfy Crew</a>
+                                <a target="_blank" href="https://discord.gg/kigurumi">Rumi Aida's Comfy Crew</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://discord.com/invite/p2u7xPN">The Animegao <br> Circle</a>
+                                <a target="_blank" href="https://discord.com/invite/p2u7xPN">The Animegao Circle</a>
                               </li>
                             </SubDropdown>
                           </li>
@@ -181,6 +181,7 @@ watch(() => route.path, () => {
                               <template #trigger>
                                 <span>Kigu Sites/Resources/<br>Creators</span>
                               </template>
+
                               <li>
                                 <a target="_blank" href="https://blackcatkig.com/">Black Cat Kig (Maker)</a>
                               </li>
@@ -188,10 +189,13 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://damekigurumi.com/Home">DameKigu (Maker)</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://kigguide.com/">Kig Guide (Info)</a>
+                                <a target="_blank" href="https://www.etsy.com/shop/KigurumiSenseiStore">JSensei (Creator)</a>
                               </li>
                               <li>
-                                <a target="_blank" href="https://www.etsy.com/shop/KigurumiSenseiStore">JSensei (Creator)</a>
+                                <a target="_blank" href="https://kigfeverclub.com/">Kig Fever Club (Maker)</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://kigguide.com/">Kig Guide (Info)</a>
                               </li>
                             </SubDropdown>
                           </li>
@@ -276,6 +280,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>AI Services</span>
                                     </template>
+
                                     <li>
                                         <a target="_blank" href="https://yuna.vnil.cc/">Free Chatbot</a>
                                     </li>
@@ -286,6 +291,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>Client Services</span>
                                     </template>
+
                                     <li>
                                         <a target="_blank" href="https://nanako.vnil.me/">IRC Client</a>
                                     </li>
@@ -299,6 +305,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>File Sharing Services</span>
                                     </template>
+
                                     <li>
                                         <a target="_blank" href="https://vnil.me/">Public Chibisafe <br> File Share Service</a>
                                     </li>
@@ -309,6 +316,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>Media</span>
                                     </template>
+
                                     <li>
                                         <a target="_blank" href="https://yuki.vnil.me">Requests (Jelly)</a>
                                     </li>
@@ -328,6 +336,7 @@ watch(() => route.path, () => {
                                     <template #trigger>
                                         <span>Sequenzia Things</span>
                                     </template>
+
                                     <li>
                                         <a target="_blank" href="https://app.vnil.me/ambient?displayname=Untitled">Ambient Display</a>
                                     </li>
