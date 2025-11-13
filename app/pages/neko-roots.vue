@@ -16,34 +16,40 @@
                 <span class="font-bold">Radarr</span>: <a href="https://riko.vnil.me" target="_blank">https://riko.vnil.me</a>
             </p>
         </li>
-        <br>
+
         <li>
             <p>
                 <span class="font-bold">Sonarr</span>: <a href="https://aiko.vnil.me" target="_blank">https://aiko.vnil.me</a>
             </p>
         </li>
-        <br>
+
         <li>
             <p>
                 <span class="font-bold">Prowlarr</span>: <a href="https://chiyo.vnil.me" target="_blank">https://chiyo.vnil.me</a>
             </p>
         </li>
-        <br>
+
         <li>
             <p>
                 <span class="font-bold">Downloader</span>: <a href="https://kiyomi.vnil.me" target="_blank">https://kiyomi.vnil.me</a>
             </p>
         </li>
-        <br>
+
         <li>
             <p>
                 <span class="font-bold">Requests</span>: <a href="https://yuki.vnil.me" target="_blank">https://yuki.vnil.me</a>
             </p>
         </li>
-        <br>
+
         <li>
             <p>
                 <span class="font-bold">AList File Manager</span>: <a href="https://fumiko.vnil.me" target="_blank">https://fumiko.vnil.me</a>
+            </p>
+        </li>
+
+        <li>
+            <p>
+                <span class="font-bold">Proxmox</span>: <a href="https://yumi.vnil.me" target="_blank">https://yumi.vnil.me</a>
             </p>
         </li>
     </ul>
