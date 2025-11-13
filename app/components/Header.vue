@@ -371,6 +371,9 @@ watch(() => route.path, () => {
                             <li>
                                 <a target="_blank" href="https://dash.cloudflare.com/">Cloudflare Dashboard</a>
                             </li>
+                            <li>
+                              <NuxtLink to="/neko-roots">Admin Access <br> (Approval Required)</NuxtLink>
+                            </li>
                         </Dropdown>
                     </li>
                     <li>
