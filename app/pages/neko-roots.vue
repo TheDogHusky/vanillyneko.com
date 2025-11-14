@@ -52,6 +52,12 @@
                 <span class="font-bold">Proxmox</span>: <a href="https://yumi.vnil.me" target="_blank">https://yumi.vnil.me</a>
             </p>
         </li>
+
+        <li>
+            <p>
+                <span class="font-bold">Gitea</span>: <a href="https://sakura.vnil.me" target="_blank">https://sakura.vnil.me</a>
+            </p>
+        </li>
     </ul>
     </section>
 </template>
