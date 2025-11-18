@@ -81,17 +81,17 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">Headset(s)</span>: Logitech Wireless G733 White, Corsair HS80 Wireless Headset
+                <span class="font-bold">Headset(s)</span>: Logitech Wireless G733 White, Logitech G733 Black
             </p>
         </li>
         <li>
             <p>
-                <span class="font-bold">Microphone</span>: Logitech G733 Headset Mic (Blue)
+                <span class="font-bold">Microphone</span>: Logitech G733 Headset Mic (Blue) *Both*
             </p>
         </li>
         <li>
             <p>
-                <span class="font-bold">Monitors</span>: 1 27 inch monitor, 1 32in Wide Moniter
+                <span class="font-bold">Monitors</span>: 1 27 inch monitor (Vertical), 1 32in Wide Moniter
             </p>
         </li>
         <li>
@@ -101,7 +101,7 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">Webcam</span>: Logitech B550 & Ausdom 1080p WebCam
+                <span class="font-bold">Webcam</span>: Insta360 Link V1 Webcam
             </p>
         </li>
         <li>
@@ -122,6 +122,21 @@
         <li>
             <p>
                 <span class="font-bold">Desk</span>: Whalen Emergent Gaming 60" Laminate Computer Desk, Black (SPUS-EGDB)
+            </p>
+        </li>
+        <li>
+            <p>
+                <span class="font-bold">Consoles</span>: Playstation 5, Xbox One S, Playstation 4, Nintendo Switch, Steam Deck (LCD Version)
+            </p>
+        </li>
+        <li>
+            <p>
+                <span class="font-bold">Laptop</span>: Macbook Pro 14" 2021, 16gb ram, 512gb SSD, M1 Pro chip
+            </p>
+        </li>
+        <li>
+            <p>
+                <span class="font-bold">Alternate Desktop</span>: Mac Mini M4, 16gb ram, 256gb SSD
             </p>
         </li>
     </ul>
