@@ -51,7 +51,7 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">GPU</span>: Geforce RTX 4070 Super 12gb
+                <span class="font-bold">GPU</span>: NVIDIA Geforce RTX 4070 Super 12gb/NVIDIA GTX 1080 Ti 10gb
             </p>
         </li>
         <li>
