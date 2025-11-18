@@ -71,7 +71,7 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">Mouse</span>: Corsair Dark RGB Pro
+                <span class="font-bold">Mouse</span>: Corsair Dark RGB Pro/Corsair Dark RGB Pro SE
             </p>
         </li>
         <li>
@@ -81,12 +81,12 @@
         </li>
         <li>
             <p>
-                <span class="font-bold">Headset(s)</span>: Logitech Wireless G733 White, Logitech G733 Black
+                <span class="font-bold">Headset(s)</span>: Logitech Wireless G733 White, Logitech Wireless G733 Black
             </p>
         </li>
         <li>
             <p>
-                <span class="font-bold">Microphone</span>: Logitech G733 Headset Mic (Blue) *Both*
+                <span class="font-bold">Microphone</span>: Logitech Wireless G733 Headset Mic (Blue) *Both*
             </p>
         </li>
         <li>
