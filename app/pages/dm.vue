@@ -30,7 +30,7 @@ const measurements = {
     { label: "inner_arm_length_right", value: 53 },
     { label: "sleeve_circumference", value: 28 },
     { label: "elbow_circumference", value: 27 },
-    { label: "shoulder_circumference", value: 43 },
+    { label: "shoulder_circumference", value: 35 },
     { label: "wrist_circumference", value: 19 },
     { label: "hand_circumference", value: 21.5 },
     { label: "palm_length", value: 21 },
