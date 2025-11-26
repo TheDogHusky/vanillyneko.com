@@ -13,6 +13,8 @@ const measurements = {
   leg: [
     { label: "inseam", value: 79 },
     { label: "thigh_circumference", value: 57 },
+    { label: "knee_circumference", value: 40 },
+    { label: "calf_circumference", value: 36 },
     { label: "ankle_circumference", value: 24 }
   ],
   foot: [
@@ -27,13 +29,17 @@ const measurements = {
     { label: "inner_arm_length_right", value: 53 },
     { label: "sleeve_circumference", value: 28 },
     { label: "elbow_circumference", value: 27 },
+    { label: "shoulder_circumference", value: 43 },
     { label: "wrist_circumference", value: 19 },
     { label: "hand_circumference", value: 21.5 },
+    { label: "palm_length", value: 21 },
     { label: "middle_finger_length", value: 8.6 }
   ],
   head: [
     { label: "circumference", value: 57 },
     { label: "neck_circumference", value: 38 },
+    { label: "neck_length", value: 15 },
+    { label: "head_length", value: 22 },
     { label: "face_height", value: 17 }
   ]
 }
@@ -49,7 +55,7 @@ const formatKey = (key: string): string => {
   <main class="center index relative bg-gradient-to-b from-gray-900 to-gray-800 text-white">
     <MainWallpaper class="absolute inset-0 opacity-50" />
     <div class="relative z-10 py-16">
-      <h1 class="font-6xl font-bold text-center drop-shadow-lg">Dame's Kigurumi Measurements</h1>
+      <h1 class="font-6xl font-bold text-center drop-shadow-lg">Dame/KigFeverClub Kigurumi Measurements</h1>
       <ScrollButton to="#content" class="mt-4" />
     </div>
   </main>
