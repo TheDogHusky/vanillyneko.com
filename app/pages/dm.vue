@@ -6,6 +6,7 @@ const measurements = {
   ],
   torso: [
     { label: "body_length", value: 64 },
+    { label: "height", value: 175.26 },
     { label: "chest", value: 90 },
     { label: "waist", value: 85 },
     { label: "hip", value: 97 }
