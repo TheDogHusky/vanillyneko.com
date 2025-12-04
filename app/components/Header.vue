@@ -156,7 +156,7 @@ watch(() => route.path, () => {
                           <li>
                             <SubDropdown>
                               <template #trigger>
-                                <span>Kigurumi Servers</span>
+                                <span>Kigurumi Discord<br> Servers</span>
                               </template>
 
                               <li>
@@ -182,9 +182,22 @@ watch(() => route.path, () => {
                                 <span>Kigu Sites/Resources/<br>Creators</span>
                               </template>
 
-                              <li>
-                                <a target="_blank" href="https://www.amazon.com/shops/alicekiggarden">Alice Kig Garden <br>(Mask Seller)</a>
-                              </li>
+                              <sub-dropdown>
+                                <template #trigger>
+                                  <span>Alice Kig Garden <br>(Seller)</span>
+                                </template>
+
+                                <li>
+                                  <a target="_blank" href="https://www.amazon.com/shops/alicekiggarden">Alice Kig Garden<br> (Amazon)</a>
+                                </li>
+                                <li>
+                                  <a target="_blank" href="mailto:alicekiggarden@gmail.com">AliceKigGarden<br> (Email)</a>
+                                </li>
+                                <li>
+                                  <a target="_blank" href="https://www.facebook.com/jiang.xinyu.545/">AliceKigGarden <br>(Facebook)</a>
+                                </li>
+                              </sub-dropdown>
+
                               <li>
                                 <a target="_blank" href="https://blackcatkig.com/">Black Cat Kig (Maker)</a>
                               </li>
