@@ -183,6 +183,9 @@ watch(() => route.path, () => {
                               </template>
 
                               <li>
+                                <a target="_blank" href="https://www.amazon.com/shops/alicekiggarden">Alice Kig Garden <br>(Mask Seller)</a>
+                              </li>
+                              <li>
                                 <a target="_blank" href="https://blackcatkig.com/">Black Cat Kig (Maker)</a>
                               </li>
                               <li>
