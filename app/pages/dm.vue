@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const measurements = {
   shoulder: [
-    { label: "width", value: 35 },
+    { label: "width", value: 38 },
     { label: "to_neck", value: 13 }
   ],
   torso: [
@@ -12,7 +12,7 @@ const measurements = {
     { label: "hip", value: 97 }
   ],
   leg: [
-    { label: "inseam", value: 79 },
+    { label: "inseam", value: 85 },
     { label: "thigh_circumference", value: 57 },
     { label: "knee_circumference", value: 40 },
     { label: "calf_circumference", value: 36 },
