@@ -30,14 +30,15 @@ import IframeResizer from '@iframe-resizer/vue/sfc';
                     sandbox="allow-scripts allow-same-origin allow-popups"
                 ></IframeResizer>
             </div>
-            <div class="status-embed uptime-kuma-embed">
-                <IframeResizer
-                    src="https://up.vnil.me/status/all/"
-                    width="100%"
-                    height="1800px"
-                    license="GPLv3"
-                ></IframeResizer>
-            </div>
-        </div>
-    </ClientOnly>
+          <!--Dead for now-->
+          <!--<div class="status-embed uptime-kuma-embed">
+              <IframeResizer
+                  src="https://up.vnil.me/status/all/"
+                  width="100%"
+                  height="1800px"
+                  license="GPLv3"
+              ></IframeResizer>
+          </div>-->
+      </div>
+  </ClientOnly>
 </template>
