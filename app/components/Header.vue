@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Dropdown from "~/components/Dropdown.vue";
+
 const active = ref(false);
 const route = useRoute();
 
@@ -386,6 +388,9 @@ watch(() => route.path, () => {
                             </li>
                             <li>
                                 <a target="_blank" href="https://dash.cloudflare.com/">Cloudflare Dashboard</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="https://auth.kiglove.moe/realms/master/account/">SSO Auth Management</a>
                             </li>
                             <li>
                               <NuxtLink to="/neko-roots">Admin Access <br> (Approval Required)</NuxtLink>
