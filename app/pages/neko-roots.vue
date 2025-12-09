@@ -86,7 +86,7 @@
         <li><p><span class="font-bold">Hinata</span>: <a href="https://hinata.vnil.me" target="_blank">https://hinata.vnil.me</a></p></li>
         <li><p><span class="font-bold">Kiyomi</span> (qBittorrent): <a href="https://kiyomi.vnil.me" target="_blank">https://kiyomi.vnil.me</a></p></li>
         <li><p><span class="font-bold">Chiyo</span> (Prowlarr): <a href="https://chiyo.vnil.me" target="_blank">https://chiyo.vnil.me</a></p></li>
-        <li><p><span class="font-bold">Sayuri</span> (Email): <a href="https://sayuri.vnil.me" target="_blank">https://sayuri.vnil.me</a></p></li>
+        <li><p><span class="font-bold">Sayuri</span> (Email): <a href="https://sayuri.kigulove.moe" target="_blank">https://sayuri.kigulove.moe</a></p></li>
         <li><p><span class="font-bold">Nanami</span>: <a href="https://nanami.vnil.me" target="_blank">https://nanami.vnil.me</a></p></li>
         <li><p><span class="font-bold">Sora</span> (Lidarr): <a href="https://sora.vnil.me" target="_blank">https://sora.vnil.me</a></p></li>
         <li><p><span class="font-bold">Rika</span>: <a href="https://rika.vnil.me" target="_blank">https://rika.vnil.me</a></p></li>
