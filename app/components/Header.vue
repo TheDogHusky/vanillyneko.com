@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Dropdown from "~/components/Dropdown.vue";
+import App from "~/app.vue";
 
 const active = ref(false);
 const route = useRoute();
@@ -300,7 +301,7 @@ watch(() => route.path, () => {
                                     </template>
 
                                     <li>
-                                        <a target="_blank" href="https://yuna.vnil.cc/">Free Chatbot</a>
+                                        <a target="_blank" href="https://yuna.vnil.cc/">Free Chatbot <br>(Down :( For Now...)</a>
                                     </li>
                                 </SubDropdown>
                             </li>
@@ -310,6 +311,9 @@ watch(() => route.path, () => {
                                         <span>Client Services</span>
                                     </template>
 
+                                    <li>
+                                      <a target="_blank" href="https://miku.vnil.me/">Game Panel</a>
+                                    </li>
                                     <li>
                                         <a target="_blank" href="https://nanako.vnil.me/">IRC Client</a>
                                     </li>
@@ -370,7 +374,7 @@ watch(() => route.path, () => {
                             <template #trigger>
                                 <span>Logins</span>
                             </template>
-
+                          
                             <li>
                                 <a target="_blank" href="https://mail.google.com/">G-Mail</a>
                             </li>
