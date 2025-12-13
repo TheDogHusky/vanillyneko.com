@@ -1,0 +1,7 @@
+.error-details {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--font-size-sm);
+}

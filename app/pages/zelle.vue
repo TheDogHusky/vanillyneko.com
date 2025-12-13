@@ -1,6 +1,3 @@
-<script setup lang="ts">
-</script>
-
 <template>
     <main class="container bg-dark min-h-10xl">
         <h1 class="font-6xl">Zelle Guide</h1>
