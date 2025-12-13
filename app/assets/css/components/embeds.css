@@ -21,6 +21,11 @@
     padding: var(--padding-lg);
 }
 
+.calendar-embed {
+    border: 8px solid var(--color-white-100);
+    border-radius: var(--border-radius-md);
+}
+
 /* Mobile styles */
 
 @media (max-width: 768px) {
