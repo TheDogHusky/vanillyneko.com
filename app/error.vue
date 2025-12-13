@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// @ts-ignore
 import type { NuxtError } from '#app';
 
 const props = defineProps({
