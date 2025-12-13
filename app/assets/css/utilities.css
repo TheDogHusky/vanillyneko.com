@@ -38,6 +38,11 @@
     opacity: 1;
 }
 
+.title-icon {
+    width: var(--size-8xl);
+    height: var(--size-8xl);
+}
+
 /* Font Classes */
 
 .font-ms {

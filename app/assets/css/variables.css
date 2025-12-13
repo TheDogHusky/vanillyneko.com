@@ -185,6 +185,12 @@
     --size-2xl: 2rem; /* 32px */
     --size-3xl: 3rem; /* 48px */
     --size-4xl: 4rem; /* 64px */
+    --size-5xl: 6rem; /* 96px */
+    --size-6xl: 8rem; /* 128px */
+    --size-7xl: 10rem; /* 160px */
+    --size-8xl: 12rem; /* 192px */
+    --size-9xl: 16rem; /* 256px */
+    --size-10xl: 20rem; /* 320px */
 
     /* Spacing */
     --spacing-xs: var(--size-xs);
