@@ -68,7 +68,7 @@
             ></iframe>
         </div>
         <p class="font-2xl">
-            Or open a ticket on <a href="https://discord.com/invite/6vQUZ4Q4YT" target="_blank" class="underline hover:text-pink-300">Discord</a> in the <code>#support</code> channel.<br>
+            Or open a ticket on <a href="https://discord.com/invite/6vQUZ4Q4YT" target="_blank">Discord</a> in the <code>#support</code> channel.<br>
             You can also try out the chat in the bottom left corner of the page.
         </p>
     </section>
