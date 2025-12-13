@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import "@iframe-resizer/child";
+// @ts-ignore
 import IframeResizer from '@iframe-resizer/vue/sfc';
 </script>
 
