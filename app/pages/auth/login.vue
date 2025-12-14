@@ -1,0 +1,18 @@
+<script setup lang="ts">
+definePageMeta({
+    auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/' }
+});
+
+const { signIn, getProviders } = useAuth();
+
+signIn("keycloak", {
+    callbackUrl: "/"
+});
+</script>
+
+<template>
+    <main class="container bg-image bg-tertiary-wallpaper center gap-2xl">
+        <h1 class="font-6xl">Log in</h1>
+        <p class="font-3xl">Please wait.. You are being redirected..</p>
+    </main>
+</template>

@@ -4,6 +4,7 @@ import App from "~/app.vue";
 
 const active = ref(false);
 const route = useRoute();
+const { status } = useAuth();
 
 function updadeHeaderColor() {
     const header = document.querySelector('header');
@@ -451,6 +452,10 @@ watch(() => route.path, () => {
                                 <NuxtLink to="/status">Status</NuxtLink>
                             </li>
                         </Dropdown>
+                    </li>
+                    <li>
+                        <NuxtLink v-if="status === 'authenticated'" to="/account">Account</NuxtLink>
+                        <NuxtLink v-else to="/auth/login"><span>Login</span></NuxtLink>
                     </li>
                 </ul>
             </div>

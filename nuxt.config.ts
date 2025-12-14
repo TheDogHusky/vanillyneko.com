@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo'],
+    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', '@sidebase/nuxt-auth'],
 
     devServer: {
         host: '0.0.0.0',
@@ -29,7 +29,11 @@ export default defineNuxtConfig({
         public: {
             backgroundImage: '/img/background.jpg',
             crispWebsiteId: '00d37c08-ee9e-4812-a4fe-1cdff160b835' // ← your Crisp ID
-        }
+        },
+        authSecret: process.env.NUXT_AUTH_SECRET,
+        keycloackClientId: process.env.KEYCLOAK_CLIENT_ID,
+        keycloackClientSecret: process.env.KEYCLOAK_CLIENT_SECRET,
+        keycloackIssuer: process.env.KEYCLOAK_ISSUER
     },
 
     vite: {
@@ -69,5 +73,24 @@ export default defineNuxtConfig({
         defaultLocale: 'en'
     },
 
-    ogImage: { enabled: false }
+    ogImage: { enabled: false },
+
+    auth: {
+        isEnabled: true,
+        disableServerSideAuth: false,
+        baseURL: `http://localhost:${process.env.PORT || 3000}/api/auth`,
+        pages: {
+            signIn: '/auth/login',
+            error: '/auth/error'
+        },
+        sessionRefresh: {
+            enablePeriodically: true,
+            enableOnWindowFocus: true
+        },
+        provider: {
+            type: 'authjs',
+            trustHost: true,
+            defaultProvider: 'vanillynekoauth'
+        }
+    }
 })
