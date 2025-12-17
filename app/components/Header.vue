@@ -396,9 +396,9 @@ watch(() => route.path, () => {
                             <li>
                                 <a target="_blank" href="https://auth.kiglove.moe/realms/master/account/">SSO Auth Management</a>
                             </li>
-                            <li>
+                            <!--<li>
                               <NuxtLink to="/neko-roots">Admin Access <br> (Approval Required)</NuxtLink>
-                            </li>
+                            </li>-->
                         </Dropdown>
                     </li>
                     <li>
@@ -419,7 +419,7 @@ watch(() => route.path, () => {
                             </li>
                             </SubDropdown>
 
-                          <SubDropdown>
+                          <!--<SubDropdown>
                             <template #trigger>
                               <span>Information</span>
                             </template>
@@ -429,7 +429,7 @@ watch(() => route.path, () => {
                             <li>
                                 <NuxtLink to="/dm">Dame Measurements <br> (Approval Required)</NuxtLink>
                             </li>
-                            </SubDropdown>
+                            </SubDropdown>-->
                         </Dropdown>
                     </li>
                     <li>
