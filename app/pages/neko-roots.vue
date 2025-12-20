@@ -1,5 +1,8 @@
 <script setup lang="ts">
-
+definePageMeta({
+    auth: true,
+    middleware: ['sidebase-auth', 'require-admin']
+});
 </script>
 
 <template>

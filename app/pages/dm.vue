@@ -1,4 +1,9 @@
 <script setup lang="ts">
+definePageMeta({
+    auth: true,
+    middleware: ['sidebase-auth', 'require-admin']
+});
+
 const measurements = {
     shoulder: [
         { label: "width", value: 38 },

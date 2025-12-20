@@ -32,6 +32,10 @@ function logOut() {
                 <span>Email</span>
                 <span>{{ data?.user?.email }}</span>
             </li>
+            <li>
+                <span>Roles</span>
+                <span>{{ data?.user?.roles.join(", ") }}</span>
+            </li>
         </ul>
         <div class="btn-group">
             <a class="btn btn-lg btn-success" :href="manageAccountURL" target="_blank">Manage Account</a>
