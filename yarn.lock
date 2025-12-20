@@ -959,7 +959,7 @@
   optionalDependencies:
     ipx "^2.1.0"
 
-"@nuxt/kit@4.2.2", "@nuxt/kit@^4.2.1":
+"@nuxt/kit@4.2.2", "@nuxt/kit@^4.2.0", "@nuxt/kit@^4.2.1":
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@nuxt/kit/-/kit-4.2.2.tgz#f3f900a59e8c8f71313e31366c9319806ac9c9e7"
   integrity sha512-ZAgYBrPz/yhVgDznBNdQj2vhmOp31haJbO0I0iah/P9atw+OHH7NJLUZ3PK+LOz/0fblKTN1XJVSi8YQ1TQ0KA==
@@ -4766,6 +4766,11 @@ isexe@^3.1.1:
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-3.1.1.tgz#4a407e2bd78ddfb14bea0c27c6f7072dde775f0d"
   integrity sha512-LpB/54B+/2J5hqQ7imZHfdU31OlgQqx7ZicVlkm9kzg9/w8GKLEcFfJl/t7DCEDueOyBAD6zCCwTO6Fzs0NoEQ==
 
+izitoast@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/izitoast/-/izitoast-1.4.0.tgz#1aa4e3408b7159fba743506af66d8be54fd929fb"
+  integrity sha512-Oc1X2wiQtPp39i5VpIjf3GJf5sfCtHKXZ5szx7RareyEeFLUlcEW0FSfBni28+Ul6KNKZRKzhVuWzSP4Xngh0w==
+
 jackspeak@^3.1.2:
   version "3.4.3"
   resolved "https://registry.yarnpkg.com/jackspeak/-/jackspeak-3.4.3.tgz#8833a9d89ab4acde6188942bd1c53b6390ed5a8a"
@@ -5900,6 +5905,13 @@ nuxt-site-config@^3.2.0, nuxt-site-config@^3.2.2:
     sirv "^3.0.2"
     site-config-stack "3.2.5"
     ufo "^1.6.1"
+
+nuxt-toast@1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/nuxt-toast/-/nuxt-toast-1.4.0.tgz#8bb745507290a20d8197dfb14fa20d963425f723"
+  integrity sha512-LGqzlRlLj4ildwAPL8w0MEQWN++DNLYhYPLT+ONkanofTI0yY/5HcUa4x+Y0vozII/Z1e51O3v1hDyCzEWFcHQ==
+  dependencies:
+    "@nuxt/kit" "^4.2.0"
 
 nuxt@^4.2.2:
   version "4.2.2"

@@ -1,0 +1,38 @@
+.iziToast>.iziToast-body {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    padding: 0 !important;
+}
+
+.iziToast {
+    padding: var(--padding-md) calc(var(--padding-md) + 42px) var(--padding-md) var(--padding-md) !important;
+}
+
+.iziToast>.iziToast-body .iziToast-icon {
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    margin-top: 0 !important;
+}
+
+.iziToast>.iziToast-body .iziToast-message {
+    width: 100% !important;
+}
+
+.iziToast>.iziToast-body .iziToast-texts {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    width: 100% !important;
+    flex-grow: 1 !important;
+}
+
+.iziToast>.iziToast-body .iziToast-title {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* TODO: FIX width of iziToast-texts not growing */

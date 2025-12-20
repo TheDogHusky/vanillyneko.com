@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 
     css: ['~/assets/css/main.css'],
 
-    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', '@sidebase/nuxt-auth'],
+    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', '@sidebase/nuxt-auth', 'nuxt-toast'],
 
     devServer: {
         host: '0.0.0.0',

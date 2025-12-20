@@ -5,7 +5,6 @@ definePageMeta({
 });
 
 const { data, signOut } = useAuth();
-console.log(data.value?.user);
 const manageAccountURL = useRuntimeConfig().public.keycloackIssuer + "/account";
 
 function logOut() {
@@ -34,7 +33,7 @@ function logOut() {
             </li>
             <li>
                 <span>Roles</span>
-                <span>{{ data?.user?.roles.join(", ") }}</span>
+                <span>{{ data?.user?.roles.length ? data?.user?.roles.join(", ") : "None" }}</span>
             </li>
         </ul>
         <div class="btn-group">
