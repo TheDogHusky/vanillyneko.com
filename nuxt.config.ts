@@ -28,12 +28,12 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             backgroundImage: '/img/background.jpg',
-            crispWebsiteId: '00d37c08-ee9e-4812-a4fe-1cdff160b835' // ← your Crisp ID
+            crispWebsiteId: process.env.NUXT_PUBLIC_CRISP_WEBSITE_ID,
+            keycloackIssuer: process.env.NUXT_PUBLIC_KEYCLOAK_ISSUER
         },
         authSecret: process.env.NUXT_AUTH_SECRET,
-        keycloackClientId: process.env.KEYCLOAK_CLIENT_ID,
-        keycloackClientSecret: process.env.KEYCLOAK_CLIENT_SECRET,
-        keycloackIssuer: process.env.KEYCLOAK_ISSUER
+        keycloackClientId: process.env.NUXT_KEYCLOAK_CLIENT_ID,
+        keycloackClientSecret: process.env.NUXT_KEYCLOAK_CLIENT_SECRET,
     },
 
     vite: {

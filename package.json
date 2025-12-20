@@ -24,7 +24,7 @@
     "dotenv": "^17.2.0",
     "mobile-device-detect": "^0.4.3",
     "next-auth": "~4.21.1",
-    "nuxt": "^4.1.1",
+    "nuxt": "^4.2.2",
     "nuxt-og-image": "^5.1.9",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"

@@ -1,9 +1,18 @@
 <script setup lang="ts">
 definePageMeta({
-    auth: true
+    auth: true,
+    middleware: ['sidebase-auth']
 });
 
 const { data, signOut } = useAuth();
+console.log(data.value?.user);
+const manageAccountURL = useRuntimeConfig().public.keycloackIssuer + "/account";
+
+function logOut() {
+    signOut({
+        callbackUrl: '/'
+    });
+}
 </script>
 
 <template>
@@ -24,8 +33,11 @@ const { data, signOut } = useAuth();
                 <span>{{ data?.user?.email }}</span>
             </li>
         </ul>
-        <button class="btn btn-danger btn-lg" @click="signOut()">
-            Sign Out
-        </button>
+        <div class="btn-group">
+            <a class="btn btn-lg btn-success" :href="manageAccountURL" target="_blank">Manage Account</a>
+            <button class="btn btn-danger btn-lg" @click="logOut">
+                Sign Out
+            </button>
+        </div>
     </main>
 </template>
