@@ -1,4 +1,4 @@
-export default defineNuxtRouteMiddleware((to) => {
+export default defineNuxtRouteMiddleware(() => {
     const { data } = useAuth();
 
     if (!data.value?.user.roles.includes("admin")) {
