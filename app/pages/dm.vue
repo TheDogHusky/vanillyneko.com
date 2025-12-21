@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { requireRole } from "~/utils/functions";
+
+definePageMeta({
+    auth: true,
+    middleware: ['sidebase-auth', requireRole("size")]
+});
+
 const measurements = {
     shoulder: [
         { label: "width", value: 38 },

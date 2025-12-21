@@ -124,10 +124,6 @@
     color: var(--btn-hover-background-color);
 }
 
-.btn-link:active {
-    color: var(--btn-active-background-color);
-}
-
 .btn-sm {
     --btn-padding: var(--padding-xs) var(--padding-sm);
     --btn-font-size: var(--font-size-sm);
@@ -136,6 +132,13 @@
 .btn-lg {
     --btn-padding: var(--padding-md) var(--padding-lg);
     --btn-font-size: var(--font-size-lg);
+}
+
+/* Button Group */
+
+.btn-group {
+    display: inline-flex;
+    gap: var(--gap-sm);
 }
 
 /* Mobile styles */

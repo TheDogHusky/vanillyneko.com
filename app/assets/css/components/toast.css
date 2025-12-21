@@ -1,0 +1,109 @@
+/* Make the body a flex container to align items properly and remove tricks */
+.iziToast>.iziToast-body {
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-md) !important;
+    padding: 0 !important;
+    width: 100% !important;
+    min-height: auto !important;
+    height: auto !important;
+}
+
+/* Adjust padding to fit this website's design, add a shadow which was before set through a :after element, change the font-family to fit the design */
+.iziToast {
+    padding: var(--padding-lg) calc(var(--padding-lg) + 42px) var(--padding-lg) var(--padding-lg) !important;
+    box-shadow: var(--shadow-md) !important;
+    font-family: inherit !important;
+    border-radius: var(--border-radius-md) !important;
+    min-height: auto !important;
+    height: auto !important;
+    overflow: hidden !important;
+    margin: 0 !important;
+}
+
+/* Center the icon vertically and remove the position tricks used before */
+.iziToast>.iziToast-body .iziToast-icon {
+    position: relative !important;
+    top: auto !important;
+    left: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Make the message take full width, remove the margin tricks used before to center stuff */
+.iziToast>.iziToast-body .iziToast-message {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+/* Make the text container grow in the body */
+.iziToast>.iziToast-body .iziToast-texts {
+    display: flex !important;
+    align-items: center !important;
+    gap: var(--gap-sm) !important;
+    flex: 1 1 auto !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: auto !important;
+}
+
+/* Remove margin and prevent title from wrapping */
+.iziToast>.iziToast-body .iziToast-title {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* Remove bunch of elements that just mess up flex */
+.iziToast:after, .iziToast>.iziToast-body:after {
+    content: none !important;
+}
+.iziToast > .iziToast-body > div:last-child {
+    display: none;
+}
+
+/* Attempt at making it a fully-flex thing */
+.iziToast-capsule {
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: row-reverse !important;
+}
+
+.iziToast-wrapper {
+    padding: var(--padding-md) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: var(--gap-md) !important;
+}
+
+.iziToast>.iziToast-body .iziToast-icon {
+    background-size: 100% !important;
+    width: calc(var(--size-lg) + 0.25rem) !important;
+    height: calc(var(--size-lg) + 0.25rem) !important;
+}
+
+/* Colors */
+.iziToast.iziToast-color-red {
+    background-color: var(--color-red-300) !important;
+    border-color: var(--color-red-400) !important;
+}
+
+.iziToast.iziToast-color-blue {
+    background-color: var(--color-blue-300) !important;
+    border-color: var(--color-blue-400) !important;
+}
+
+.iziToast.iziToast-color-orange {
+    background-color: var(--color-yellow-200) !important;
+    border-color: var(--color-yellow-300) !important;
+}
+
+.iziToast.iziToast-color-green {
+    background-color: var(--color-green-200) !important;
+    border-color: var(--color-green-300) !important;
+}
+
+.iziToast.iziToast-color-yellow {
+    background-color: var(--color-yellow-200) !important;
+    border-color: var(--color-yellow-300) !important;
+}

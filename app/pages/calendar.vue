@@ -1,4 +1,11 @@
 <script setup lang="ts">
+import { requireRole } from "~/utils/functions";
+
+definePageMeta({
+    auth: true,
+    middleware: ['sidebase-auth', requireRole("calendar")]
+});
+
 const calendarEmbed = ref({
     src: "https://calendar.google.com/calendar/embed?src=db22582ee0218c2eacf802552c501f47c66b9c121192acbc1521a7a68548d379%40group.calendar.google.com&ctz=America%2FNew_York",
     height: "600px",
