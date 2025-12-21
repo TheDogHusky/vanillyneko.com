@@ -167,4 +167,27 @@ definePageMeta({
             </p></li>
         </ul>
     </section>
+  <section class="container min-h-screen bg-image bg-secondary-wallpaper">
+    <h2 class="font-6xl">IPMI!~</h2>
+    <ul class="font-2xl w-3/4">
+      <li><p><span class="font-bold">SMT IPMI</span>: <a href="https://10.14.191.8"
+                                                         target="_blank">https://10.14.191.8 (ovpn profile)</a>
+      </p></li>
+      <li><p><span class="font-bold">SML IPMI</span>: <a href="https://10.40.40.137"
+                                                         target="_blank">https://10.40.40.137 (ovpn profile)</a>
+      </p></li>
+      <li><p><span class="font-bold">DS1</span>: <a href="https://10.14.191.8"
+                                                    target="_blank">https://10.40.40.11 (ovpn profile)</a>
+      </p></li>
+      <li><p><span class="font-bold">DS2</span>: <a href="https://10.40.40.137"
+                                                    target="_blank">https://10.40.40.12 (ovpn profile)</a>
+      </p></li>
+      <li><p><span class="font-bold">DS3</span>: <a href="https://10.14.191.8"
+                                                    target="_blank">https://10.40.40.13 (ovpn profile)</a>
+      </p></li>
+      <li><p><span class="font-bold">T340</span>: <a href="https://10.40.40.137"
+                                                     target="_blank">https://10.40.40.14 (ovpn profile)</a>
+      </p></li>
+    </ul>
+  </section>
 </template>
