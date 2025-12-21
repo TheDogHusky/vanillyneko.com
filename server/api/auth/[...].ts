@@ -16,12 +16,13 @@ export default NuxtAuthHandler({
             clientSecret: useRuntimeConfig().keycloackClientSecret,
             issuer: useRuntimeConfig().public.keycloackIssuer,
             profile(profile: any) {
+                console.log("Keycloak profile:", profile.resource_access.vanillynekocom?.roles);
                 return {
                     id: profile.sub,
                     name: profile.name ?? profile.preferred_username,
                     email: profile.email,
                     image: profile.picture,
-                    roles: profile.roles || []
+                    roles: profile.resource_access.vanillynekocom?.roles || []
                 };
             }
         })

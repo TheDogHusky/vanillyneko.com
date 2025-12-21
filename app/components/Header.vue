@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import Dropdown from "~/components/Dropdown.vue";
-import App from "~/app.vue";
+import { hasOneOfRoles } from "~/utils/functions";
 
 const active = ref(false);
 const route = useRoute();
-const { status } = useAuth();
+const { status, data } = useAuth();
 
 function updadeHeaderColor() {
     const header = document.querySelector('header');
@@ -397,8 +397,8 @@ watch(() => route.path, () => {
                             <li>
                                 <a target="_blank" href="https://auth.kiglove.moe/realms/master/account/">SSO Auth Management</a>
                             </li>
-                            <li>
-                              <NuxtLink to="/neko-roots">Admin Access <br> (Approval Required)</NuxtLink>
+                            <li v-if="hasRole(data, 'admin')">
+                              <NuxtLink to="/neko-roots">Admin Access</NuxtLink>
                             </li>
                         </Dropdown>
                     </li>
@@ -420,15 +420,15 @@ watch(() => route.path, () => {
                             </li>
                             </SubDropdown>
 
-                          <SubDropdown>
+                          <SubDropdown v-if="hasOneOfRoles(data, ['size', 'calendar'])">
                             <template #trigger>
                               <span>Information</span>
                             </template>
-                            <li>
-                                <NuxtLink to="/calendar">Neko's Calendar <br> (Approval Required)</NuxtLink>
+                            <li v-if="hasRole(data, 'calendar')">
+                                <NuxtLink to="/calendar">Neko's Calendar</NuxtLink>
                             </li>
-                            <li>
-                                <NuxtLink to="/dm">Dame Measurements <br> (Approval Required)</NuxtLink>
+                            <li v-if="hasRole(data, 'size')">
+                                <NuxtLink to="/dm">Dame Measurements</NuxtLink>
                             </li>
                             </SubDropdown>
                         </Dropdown>

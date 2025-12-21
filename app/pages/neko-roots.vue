@@ -1,7 +1,9 @@
 <script setup lang="ts">
+import { requireRole } from "~/utils/functions";
+
 definePageMeta({
     auth: true,
-    middleware: ['sidebase-auth', 'require-admin']
+    middleware: ['sidebase-auth', requireRole("admin")]
 });
 </script>
 
