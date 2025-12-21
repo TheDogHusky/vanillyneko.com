@@ -5,6 +5,8 @@ interface VanillyKeycloakProfile extends KeycloakProfile {
     roles?: string[];
 }
 
+console.log(process.env)
+
 export default NuxtAuthHandler({
     secret: useRuntimeConfig().authSecret,
     providers: [

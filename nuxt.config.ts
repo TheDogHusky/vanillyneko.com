@@ -34,6 +34,7 @@ export default defineNuxtConfig({
         authSecret: process.env.NUXT_AUTH_SECRET,
         keycloackClientId: process.env.NUXT_KEYCLOAK_CLIENT_ID,
         keycloackClientSecret: process.env.NUXT_KEYCLOAK_CLIENT_SECRET,
+        authOrigin: process.env.NUXT_AUTH_ORIGIN
     },
 
     vite: {
@@ -78,7 +79,7 @@ export default defineNuxtConfig({
     auth: {
         isEnabled: true,
         disableServerSideAuth: false,
-        baseURL: `http://localhost:${process.env.PORT || 3000}/api/auth`,
+        originEnvKey: 'NUXT_AUTH_ORIGIN',
         pages: {
             signIn: '/auth/login',
             error: '/auth/error'
