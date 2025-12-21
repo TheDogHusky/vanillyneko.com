@@ -24,6 +24,7 @@
     "canvas-confetti": "^1.9.4",
     "dotenv": "^17.2.0",
     "izitoast": "^1.4.0",
+    "jwt-decode": "^4.0.0",
     "mobile-device-detect": "^0.4.3",
     "next-auth": "~4.21.1",
     "nuxt": "^4.2.2",
