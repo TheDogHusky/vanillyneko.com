@@ -12,7 +12,7 @@
 
 /* Adjust padding to fit this website's design, add a shadow which was before set through a :after element, change the font-family to fit the design */
 .iziToast {
-    padding: calc(var(--padding-md) + 2px) calc(var(--padding-md) + 42px) var(--padding-md) var(--padding-md) !important;
+    padding: var(--padding-lg) calc(var(--padding-lg) + 42px) var(--padding-lg) var(--padding-lg) !important;
     box-shadow: var(--shadow-md) !important;
     font-family: inherit !important;
     border-radius: var(--border-radius-md) !important;
@@ -74,4 +74,10 @@
     display: flex !important;
     flex-direction: column !important;
     gap: var(--gap-md) !important;
+}
+
+.iziToast>.iziToast-body .iziToast-icon {
+    background-size: 100% !important;
+    width: calc(var(--size-lg) + 0.25rem) !important;
+    height: calc(var(--size-lg) + 0.25rem) !important;
 }
