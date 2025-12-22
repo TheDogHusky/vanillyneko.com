@@ -288,5 +288,5 @@
     --breakpoint-lg: 1200px; /* Large devices (large desktops) */
     --breakpoint-xl: 1440px; /* Extra large devices (large desktops) */
 
-    --background-image: url('/img/background.jpg'); /* Background image */
+    --background-image: url('/img/background.png'); /* Background image */
 }
