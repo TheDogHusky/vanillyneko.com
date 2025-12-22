@@ -430,7 +430,7 @@ watch(() => route.path, () => {
                             <li v-if="hasRole(data, 'size')">
                                 <NuxtLink to="/dm">Dame Measurements</NuxtLink>
                             </li>
-                            </SubDropdown>-->
+                            </SubDropdown>
                         </Dropdown>
                     </li>
                     <li>
