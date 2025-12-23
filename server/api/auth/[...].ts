@@ -49,7 +49,10 @@ const refreshAccessToken = async (token: any) => {
     } catch (error: any) {
         return {
             ...token,
-            error: "RefreshAccessTokenError: " + error.message
+            user: {
+                roles: []
+            },
+            error: "RefreshAccessTokenError: " + error.error + ": " + error.error_description
         }
     }
 }
