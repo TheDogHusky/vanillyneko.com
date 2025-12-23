@@ -20,7 +20,6 @@ export const getBackgroundClass = (customIndex?: number): string => {
  */
 export const requireRole = (role: string) => (to: RouteLocationNormalizedGeneric, from: RouteLocationNormalizedGeneric) => {
     const { data } = useAuth();
-    console.log(data.value?.user)
 
     if (!data.value?.user.roles.includes(role) && !data.value?.user.roles.includes("admin")) {
         if (!from || !from.name) {
