@@ -3,10 +3,11 @@ definePageMeta({
     auth: { unauthenticatedOnly: true, navigateAuthenticatedTo: '/' }
 });
 
-const { signIn, getProviders } = useAuth();
+const { signIn } = useAuth();
 
 signIn("keycloak", {
-    callbackUrl: "/"
+    callbackUrl: "/",
+    redirect: true
 });
 </script>
 
