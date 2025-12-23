@@ -1,6 +1,6 @@
 export default defineNuxtPlugin(() => {
     const toast = useToast();
-    const { data, signOut, getProviders } = useAuth();
+    const { data, signOut } = useAuth();
 
     watch(
         () => data.value,

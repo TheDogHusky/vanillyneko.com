@@ -77,7 +77,7 @@ export default NuxtAuthHandler({
         })
     ],
     callbacks: {
-        async jwt({ token, user, trigger, session, account }) {
+        async jwt({ token, user, account }) {
             if (account && user) {
                 return {
                     ...token,
