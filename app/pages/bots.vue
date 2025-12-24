@@ -9,7 +9,7 @@ const getIcon = (link: string) => {
     } else if (link.includes('github.com')) {
         return 'mdi:github';
     } else {
-        return 'material-symbols-light:link';
+        return 'material-symbols-light:links';
     }
 }
 

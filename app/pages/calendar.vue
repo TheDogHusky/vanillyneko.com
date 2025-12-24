@@ -26,8 +26,6 @@ function onResize() {
         calendarEmbed.value.width = "1200px";
         calendarEmbed.value.height = "800px";
     }
-
-    console.log(`Adjusted calendar embed to ${calendarEmbed.value.width} x ${calendarEmbed.value.height}`);
 }
 
 onMounted(() => {

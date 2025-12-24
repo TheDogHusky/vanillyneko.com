@@ -7,8 +7,11 @@ export default defineNuxtConfig({
     future: { compatibilityVersion: 4 },
 
     css: ['~/assets/css/main.css'],
-
     modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', '@sidebase/nuxt-auth', 'nuxt-toast'],
+
+    routeRules: {
+        '/l/**': { ssr: false }
+    },
 
     devServer: {
         host: '0.0.0.0',
