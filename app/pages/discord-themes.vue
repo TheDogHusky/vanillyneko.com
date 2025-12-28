@@ -14,8 +14,8 @@ interface Theme {
 const content = ref<Theme[]>([]);
 
 /**
- * Extracts the markdown URL and repository name from a GitHub link.
- * @param githubLink - The GitHub repository link.
+ * Extracts the markdown URL and repository name from a GitHub links.
+ * @param githubLink - The GitHub repository links.
  * @return An object containing the markdown URL and repository name.
  */
 const extractInformation = (githubLink: string): Theme => {
