@@ -61,7 +61,7 @@ watch(() => route.path, () => {
                     <li>
                         <Dropdown>
                             <template #trigger>
-                                <span>Donations</span>
+                                <span>Payments</span>
                             </template>
 
                             <li>
@@ -89,56 +89,14 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://pay.vnil.me">Purchase Services/<br>Donate (Stripe/Paypal)</a>
+                            </li>
+                            <li>
                                 <SubDropdown>
                                     <template #trigger>
-                                        <span>Stripe Donation</span>
+                                        <span>Manage Old<br>Stripe Donation</span>
                                     </template>
 
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/5kAeUU0W9dL39e8bIM">5$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/5kAeUU0W9dL39e8bIM">10$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/6oEaEE48lgXfduo9AF">15$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/9AQ00034hdL39e86ov">20$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/3cs7ss48lbCV0HCfZ6">25$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/28o000dIVcGZfCwcMV">30$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/9AQ3cc8oB7mFaic3cm">35$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/dR600048lcGZaic7sD">40$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/14k1440W922leys3co">45$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/3cs1448oB4at3TOdQT">50$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/00g288gV7ayRduo00d">55$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/5kA9AAdIV9uNfCw3cq">60$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/00g3cccERbCV1LGcN1">65$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/4gwfYY8oBfTb61WaEU">70$ Monthly</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://buy.stripe.com/8wM4gg5cp9uN4XS7sJ">75$ Monthly</a>
-                                    </li>
                                     <li>
                                         <a target="_blank" href="https://billing.stripe.com/p/login/6oE6px2Zwe6v2QwaEE">Manage Stripe Billing</a>
                                     </li>
@@ -216,6 +174,9 @@ watch(() => route.path, () => {
                               </li>
                               <li>
                                 <a target="_blank" href="https://kigguide.com/">Kig Guide (Info)</a>
+                              </li>
+                              <li>
+                                <a target="_blank" href="https://kig.land/">Kig Land (Maker)</a>
                               </li>
                             </SubDropdown>
                           </li>

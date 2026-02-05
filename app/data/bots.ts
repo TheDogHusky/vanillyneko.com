@@ -1,7 +1,7 @@
 export const bots = [
     {
-        name: 'Music Bot',
+        name: 'Mus Bot (Music Bot)',
         links: ['https://discordapp.com/oauth2/authorize?client_id=752644849609474048&scope=bot%20applications.commands&permissions=36700160'],
-        description: 'A bot that plays music in your voice channel. It supports YouTube, Spotify, and uses Slash Commands, with a good audio quality.',
+        description: 'A discord bot that plays music in your voice channel. It supports YouTube, Spotify, Apple Music, etc. and uses Slash Commands, with a good audio quality.',
     }
 ];
