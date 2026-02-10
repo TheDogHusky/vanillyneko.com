@@ -222,6 +222,9 @@ watch(() => route.path, () => {
                                 <a target="_blank" href="https://myanimelist.net/profile/VanillyNeko">MyAnimeList</a>
                             </li>
                             <li>
+                                <a target="_blank" href="https://vanillyneko.slack.com">Slack</a>
+                            </li>
+                            <li>
                                 <a target="_blank" href="https://www.snapchat.com/@vanillyneko">Snapchat</a>
                             </li>
                             <li>
