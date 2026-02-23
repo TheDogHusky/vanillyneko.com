@@ -107,3 +107,28 @@
     background-color: var(--color-yellow-200) !important;
     border-color: var(--color-yellow-300) !important;
 }
+
+.banner {
+    margin-top: calc(var(--gap-3xl)) !important;
+}
+
+@media screen and (max-width: 800px) {
+    .iziToast>.iziToast-body {
+        flex-direction: column !important;
+    }
+
+    .iziToast>.iziToast-body .iziToast-icon {
+        width: calc(var(--size-lg) + 0.25rem) !important;
+        height: calc(var(--size-lg) + 0.25rem) !important;
+    }
+
+    .iziToast>.iziToast-body .iziToast-texts {
+        gap: var(--gap-sm) !important;
+        width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    .iziToast>.iziToast-body .iziToast-title {
+        white-space: normal !important;
+    }
+}

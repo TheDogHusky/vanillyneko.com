@@ -26,6 +26,16 @@ watch(
     },
     { immediate: true }
 );
+
+// DOWNTIME TOAST EXAMPLE
+toast.error({
+    title: "Scheduled Maintenance",
+    position: "topCenter",
+    class: "banner",
+    timeout: false,
+    icon: "iziToast-icon ico-warning",
+    message: "Our services are currently offline at the moment due to a migration towards a datacenter. Please do not contact us about this."
+});
 </script>
 
 <template>
