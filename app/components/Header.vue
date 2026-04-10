@@ -178,6 +178,9 @@ watch(() => route.path, () => {
                               <li>
                                 <a target="_blank" href="https://kig.land/">Kig Land (Maker)</a>
                               </li>
+                              <li>
+                                <a target="_blank" href="https://kig.wiki/">Kig Wiki <br>(Community Resources)</a>
+                              </li>
                             </SubDropdown>
                           </li>
                         </dropdown>

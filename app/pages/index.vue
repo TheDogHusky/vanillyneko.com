@@ -14,7 +14,7 @@
             We Now Offer Server Hosting Again! Inquire If Interested At
             <NuxtLink to="/contact">Our Contact Page</NuxtLink>
             Or Use the Chat Button To The Bottom Left!<br/>
-            I'm a variety streamer (sometimes), cosplayer, kigurumi, content creator, coder, avatar creator (sometimes)
+            I'm a variety streamer (sometimes), cosplayer, kigurumi, fursuiter (Bnuuy), content creator, coder, avatar creator (sometimes)
             and Server Host! <br/>
             I'm super friendly and outgoing and easy to get along with! <br/>
             I also take 3D print commissions!
