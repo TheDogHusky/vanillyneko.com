@@ -73,7 +73,7 @@ export default defineNuxtConfig({
         name: "VanillyNeko's website",
         description: 'VanillyNeko is a variety streamer, cosplayer, fursuiter, kigurumi, content creator, coder, avatar creator and server host. She also takes 3D print commissions! Check out her socials and contact her for any questions! All information is available on the site.',
         url: 'https://vanillyneko.com',
-        image: '/img/logo.png',
+        image: 'https://vanillyneko.com/img/logo.png',
         defaultLocale: 'en'
     },
 
