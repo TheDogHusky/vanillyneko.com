@@ -187,7 +187,7 @@ watch(() => route.path, () => {
                           <li>
                             <SubDropdown>
                               <template #trigger>
-                                <span>Kigu Sites/Resources/<br>Creators</span>
+                                <span>KiguLove Peeps</span>
 
                                 <li>
                                   <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(XivoSessian)</a>
