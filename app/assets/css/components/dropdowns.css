@@ -52,6 +52,7 @@ header.scrolled .dropdown-trigger:hover {
     z-index: var(--z-index-dropdown);
     width: max-content;
     min-width: 100%;
+    max-width: 18rem;
 }
 
 .dropdown-content a {
@@ -59,7 +60,8 @@ header.scrolled .dropdown-trigger:hover {
     padding: var(--padding-sm) var(--padding-md);
     border-radius: var(--border-radius-sm);
     text-decoration: none;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
     display: block;
     transition: background-color var(--transition-duration-fast) var(--transition-timing-function);
 }
@@ -97,15 +99,13 @@ header.scrolled .dropdown-trigger:hover {
 .sub-dropdown {
     position: relative;
     width: 100%;
-    max-width: calc(15rem - var(--padding-lg) * 2);
 }
 
 .sub-dropdown-trigger {
     display: inline-flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
-    white-space: nowrap;
-    min-width: fit-content;
     gap: var(--gap-xs);
     background: none;
     text-align: left;
@@ -116,6 +116,8 @@ header.scrolled .dropdown-trigger:hover {
     padding: var(--padding-sm) var(--padding-md);
     border-radius: var(--border-radius-sm);
     text-decoration: none;
+    white-space: normal;
+    word-break: break-word;
     transition: background-color var(--transition-duration-fast) var(--transition-timing-function);
 }
 
@@ -134,6 +136,7 @@ header.scrolled .dropdown-trigger:hover {
     gap: var(--padding-xs);
     background-color: var(--color-white-100);
     width: 100%;
+    box-sizing: border-box;
     padding-left: var(--padding-sm);
     z-index: var(--z-index-dropdown);
     border-radius: var(--border-radius-md);
@@ -145,6 +148,8 @@ header.scrolled .dropdown-trigger:hover {
     border-radius: var(--border-radius-sm);
     text-decoration: none;
     display: block;
+    white-space: normal;
+    word-break: break-word;
     transition: background-color var(--transition-duration-fast) var(--transition-timing-function);
 }
 
@@ -227,10 +232,11 @@ header.scrolled .dropdown-trigger:hover {
 
     .dropdown-content a {
         padding: var(--padding-sm);
+        white-space: normal;
     }
 
     .sub-dropdown {
-        max-width: calc(15rem - var(--padding-lg) * 2)
+        width: 100%;
     }
 
     .sub-dropdown-trigger {
@@ -243,7 +249,8 @@ header.scrolled .dropdown-trigger:hover {
         position: relative;
         left: 0;
         top: 0;
-        max-width: calc(15rem - var(--padding-lg) * 2);
+        width: auto;
+        min-width: 100%;
         padding-left: var(--padding-lg);
         background-color: transparent;
         border-radius: 0;
