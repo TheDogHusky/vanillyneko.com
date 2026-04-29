@@ -191,7 +191,7 @@ watch(() => route.path, () => {
                               </template>
 
                                 <li>
-                                  <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(XivoSessian)</a>
+                                  <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(Xivosesian)</a>
                                 </li>
                             </SubDropdown>
                           </li>
