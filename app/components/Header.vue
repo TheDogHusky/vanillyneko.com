@@ -2,6 +2,22 @@
 import Dropdown from "~/components/Dropdown.vue";
 import { hasOneOfRoles } from "~/utils/functions";
 import SubDropdown from "~/components/SubDropdown.vue";
+import { navbarItems } from "~/data/navbar";
+
+const sortAlphabetically = (a: any, b: any) => {
+    if (a.label < b.label) return -1;
+    if (a.label > b.label) return 1;
+    return 0;
+};
+const sortNavbarItems = (items: any[]) => {
+    items.sort(sortAlphabetically);
+    for (const item of items) {
+        if (item.items && Array.isArray(item.items)) {
+            sortNavbarItems(item.items);
+        }
+    }
+};
+sortNavbarItems(navbarItems);
 
 const active = ref(false);
 const route = useRoute();
