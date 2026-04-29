@@ -188,11 +188,11 @@ watch(() => route.path, () => {
                             <SubDropdown>
                               <template #trigger>
                                 <span>KiguLove Peeps</span>
+                              </template>
 
                                 <li>
                                   <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(XivoSessian)</a>
                                 </li>
-                              </template>
                             </SubDropdown>
                           </li>
                         </dropdown>
