@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Dropdown from "~/components/Dropdown.vue";
 import { hasOneOfRoles } from "~/utils/functions";
+import SubDropdown from "~/components/SubDropdown.vue";
 
 const active = ref(false);
 const route = useRoute();
@@ -181,6 +182,17 @@ watch(() => route.path, () => {
                               <li>
                                 <a target="_blank" href="https://kig.wiki/">Kig Wiki <br>(Community Resources)</a>
                               </li>
+                            </SubDropdown>
+                          </li>
+                          <li>
+                            <SubDropdown>
+                              <template #trigger>
+                                <span>Kigu Sites/Resources/<br>Creators</span>
+
+                                <li>
+                                  <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(XivoSessian)</a>
+                                </li>
+                              </template>
                             </SubDropdown>
                           </li>
                         </dropdown>
