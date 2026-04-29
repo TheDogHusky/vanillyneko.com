@@ -1,4 +1,15 @@
-export const navbarItems = [
+interface NavbarItem {
+    label: string;
+    to?: string;
+    target?: string;
+    type: 'link' | 'dropdown' | 'subdropdown';
+    items?: NavbarItem[];
+    auth?: 'authenticated' | 'unauthenticated';
+    roles?: string[] | string;
+    oneOfRoles?: string[];
+}
+
+export const navbarItems: NavbarItem[] = [
     {
         label: 'Home',
         to: '/',
