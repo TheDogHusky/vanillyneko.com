@@ -123,12 +123,31 @@ watch(() => route.path, () => {
 
                                             <template v-for="(subChild, subChildIndex) in child.items" :key="`sub-${index}-${childIndex}-${subChildIndex}-${subChild.label}`">
                                                 <li v-if="canView(subChild)">
-                                                    <a v-if="subChild.target === '_blank'" :href="subChild.to" target="_blank">
-                                                        <span v-html="subChild.label"></span>
-                                                    </a>
-                                                    <NuxtLink v-else :to="subChild.to">
-                                                        <span v-html="subChild.label"></span>
-                                                    </NuxtLink>
+                                                    <template v-if="subChild.type === 'link'">
+                                                        <a v-if="subChild.target === '_blank'" :href="subChild.to" target="_blank">
+                                                            <span v-html="subChild.label"></span>
+                                                        </a>
+                                                        <NuxtLink v-else :to="subChild.to">
+                                                            <span v-html="subChild.label"></span>
+                                                        </NuxtLink>
+                                                    </template>
+
+                                                    <SubDropdown v-else-if="subChild.type === 'subdropdown'">
+                                                        <template #trigger>
+                                                            <span v-html="subChild.label"></span>
+                                                        </template>
+
+                                                        <template v-for="(deepChild, deepChildIndex) in subChild.items" :key="`deep-${index}-${childIndex}-${subChildIndex}-${deepChildIndex}-${deepChild.label}`">
+                                                            <li v-if="canView(deepChild)">
+                                                                <a v-if="deepChild.target === '_blank'" :href="deepChild.to" target="_blank">
+                                                                    <span v-html="deepChild.label"></span>
+                                                                </a>
+                                                                <NuxtLink v-else :to="deepChild.to">
+                                                                    <span v-html="deepChild.label"></span>
+                                                                </NuxtLink>
+                                                            </li>
+                                                        </template>
+                                                    </SubDropdown>
                                                 </li>
                                             </template>
                                         </SubDropdown>
