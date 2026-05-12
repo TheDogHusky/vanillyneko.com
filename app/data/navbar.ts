@@ -64,7 +64,8 @@ export const navbarItems: NavbarItem[] = [
                         items: [
                             { label: 'Alice Kig Garden (Amazon)', to: 'https://www.amazon.com/shops/alicekiggarden', target: '_blank', type: 'link' },
                             { label: 'AliceKigGarden (Email)', to: 'mailto:alicekiggarden@gmail.com', target: '_blank', type: 'link' },
-                            { label: 'AliceKigGarden (Facebook)', to: 'https://www.facebook.com/jiang.xinyu.545/', target: '_blank', type: 'link' }
+                            { label: 'AliceKigGarden (Facebook)', to: 'https://www.facebook.com/jiang.xinyu.545/', target: '_blank', type: 'link' },
+                            { label: 'AliceKigGarden (Twitter)', to: 'https://x.com/Alicekigsale', target: '_blank', type: 'link' }
                         ]
                     },
                     { label: 'Black Cat Kig (Maker)', to: 'https://blackcatkig.com/', target: '_blank', type: 'link' },
