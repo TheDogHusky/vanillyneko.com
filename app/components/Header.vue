@@ -2,6 +2,31 @@
 import Dropdown from "~/components/Dropdown.vue";
 import { hasOneOfRoles } from "~/utils/functions";
 import SubDropdown from "~/components/SubDropdown.vue";
+import { navbarItems } from "~/data/navbar";
+
+const sortedNavbarItems = computed(() => {
+    const clone = JSON.parse(JSON.stringify(navbarItems));
+
+    const sortAlphabetically = (a: any, b: any) => {
+        if (a.label < b.label) return -1;
+        if (a.label > b.label) return 1;
+        return 0;
+    };
+
+    const sortNavbarItems = (items: any[]) => {
+        if (!items || !Array.isArray(items)) return;
+        items.sort(sortAlphabetically);
+        for (const item of items) {
+            if (item.items && Array.isArray(item.items)) {
+                sortNavbarItems(item.items);
+            }
+        }
+    };
+
+    clone.forEach((item: any) => sortNavbarItems(item.items));
+
+    return clone;
+});
 
 const active = ref(false);
 const route = useRoute();
@@ -18,6 +43,13 @@ function updadeHeaderColor() {
         }
     }
 }
+
+const canView = (item: any) => {
+    if (item.auth && item.auth !== status.value) return false;
+    if (item.roles && typeof hasRole !== 'undefined' && !hasRole(data.value, item.roles)) return false;
+
+    return !(item.oneOfRoles && !hasOneOfRoles(data.value, item.oneOfRoles));
+};
 
 onMounted(() => {
     updadeHeaderColor();
@@ -56,389 +88,56 @@ watch(() => route.path, () => {
             </div>
             <div class="navbar-collapse" :class="{ active }">
                 <ul class="navbar-items">
-                    <li>
-                        <NuxtLink to="/"><span>Home</span></NuxtLink>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Payments</span>
+                    <template v-for="(item, index) in sortedNavbarItems" :key="`nav-${index}-${item.label}`">
+                        <li v-if="canView(item)">
+                            <template v-if="item.type === 'link'">
+                                <a v-if="item.target === '_blank'" :href="item.to" target="_blank">
+                                    <span v-html="item.label"></span>
+                                </a>
+                                <NuxtLink v-else :to="item.to">
+                                    <span v-html="item.label"></span>
+                                </NuxtLink>
                             </template>
 
-                            <li>
-                                <a target="_blank" href="https://www.amazon.com/hz/wishlist/ls/15EGTSWVHZJHX?ref_=wl_share">Amazon Wishlist</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://buymeacoffee.com/vanillyneko">BuyMeACoffee</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://cash.app/$VanillyNeko">Cashapp</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://vanillyneko.gumroad.com/coffee">Gumroad</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://ko-fi.com/vanillyneko">Ko-Fi</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://liberapay.com/vanillyneko/">LiberaPay</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://patreon.com/vanillyneko?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink">Patreon</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.paypal.com/paypalme/vanillynekottv">PayPal</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://pay.vnil.me">Purchase Services/<br>Donate (Stripe/Paypal)</a>
-                            </li>
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>Manage Old<br>Stripe Donation</span>
-                                    </template>
-
-                                    <li>
-                                        <a target="_blank" href="https://billing.stripe.com/p/login/6oE6px2Zwe6v2QwaEE">Manage Stripe Billing</a>
-                                    </li>
-                                </SubDropdown>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://venmo.com/u/VanillyNeko">Venmo</a>
-                            </li>
-                            <li>
-                                <NuxtLink to="/zelle">Zelle</NuxtLink>
-                            </li>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <dropdown>
-                            <template #trigger>
-                                <span>Kigu Resources</span>
-                            </template>
-                          <li>
-                            <SubDropdown>
-                              <template #trigger>
-                                <span>Kigurumi Discord<br> Servers</span>
-                              </template>
-
-                              <li>
-                                <a target="_blank" href="https://discord.gg/kigurumi">Kigurumi International <br> Group</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://discord.gg/ddYWRZxnmn">Kigurumi Shrine</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://discord.gg/hTq5Z5ueav">Neko Nico's Litterbox</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://discord.gg/kigurumi">Rumi Aida's Comfy Crew</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://discord.com/invite/p2u7xPN">The Animegao Circle</a>
-                              </li>
-                            </SubDropdown>
-                          </li>
-                          <li>
-                            <SubDropdown>
-                              <template #trigger>
-                                <span>Kigu Sites/Resources/<br>Creators</span>
-                              </template>
-
-                              <sub-dropdown>
+                            <Dropdown v-else-if="item.type === 'dropdown'">
                                 <template #trigger>
-                                  <span>Alice Kig Garden <br>(Seller)</span>
+                                    <span v-html="item.label"></span>
                                 </template>
 
-                                <li>
-                                  <a target="_blank" href="https://www.amazon.com/shops/alicekiggarden">Alice Kig Garden<br> (Amazon)</a>
-                                </li>
-                                <li>
-                                  <a target="_blank" href="mailto:alicekiggarden@gmail.com">AliceKigGarden<br> (Email)</a>
-                                </li>
-                                <li>
-                                  <a target="_blank" href="https://www.facebook.com/jiang.xinyu.545/">AliceKigGarden <br>(Facebook)</a>
-                                </li>
-                              </sub-dropdown>
+                                <template v-for="(child, childIndex) in item.items" :key="`drop-${index}-${childIndex}-${child.label}`">
+                                    <li v-if="canView(child)">
 
-                              <li>
-                                <a target="_blank" href="https://blackcatkig.com/">Black Cat Kig (Maker)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://damekigurumi.com/Home">DameKigu (Maker)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://www.etsy.com/shop/KigurumiSenseiStore">JSensei (Creator)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://kigfeverclub.com/">Kig Fever Club (Maker)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://kigguide.com/">Kig Guide (Info)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://kig.land/">Kig Land (Maker)</a>
-                              </li>
-                              <li>
-                                <a target="_blank" href="https://kig.wiki/">Kig Wiki <br>(Community Resources)</a>
-                              </li>
-                            </SubDropdown>
-                          </li>
-                          <li>
-                            <SubDropdown>
-                              <template #trigger>
-                                <span>KiguLove Peeps</span>
-                              </template>
+                                        <template v-if="child.type === 'link'">
+                                            <a v-if="child.target === '_blank'" :href="child.to" target="_blank">
+                                                <span v-html="child.label"></span>
+                                            </a>
+                                            <NuxtLink v-else :to="child.to">
+                                                <span v-html="child.label"></span>
+                                            </NuxtLink>
+                                        </template>
 
-                                <li>
-                                  <a target="_blank" href="https://novakig.kiglove.moe">NovaKig <br>(Xivosesian)</a>
-                                </li>
-                            </SubDropdown>
-                          </li>
-                        </dropdown>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Socials</span>
-                            </template>
+                                        <SubDropdown v-else-if="child.type === 'subdropdown'">
+                                            <template #trigger>
+                                                <span v-html="child.label"></span>
+                                            </template>
 
-                            <li>
-                                <a target="_blank" href="https://bsky.app/profile/vanillyneko.bsky.social">Bluesky</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://disboard.org/server/883395034739773510">Disboard</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://discord.com/invite/6vQUZ4Q4YT">Discord Server</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/ellie.lane.399488/">Facebook (Personal)</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/vanillyneko">Facebook Page</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://giphy.com/channel/vanillyneko">Giphy</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/VanillyNeko">GitHub (organization)</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://github.com/arty01238">Github (personal)</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.google.com/search?q=VanillyNeko">Google Search</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.instagram.com/vanillyneko/">Instagram</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.facebook.com/vanillyneko">History</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://myanimelist.net/profile/VanillyNeko">MyAnimeList</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://vanillyneko.slack.com">Slack</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.snapchat.com/@vanillyneko">Snapchat</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://open.spotify.com/user/alrider01226">Spotify</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://steamcommunity.com/id/VanillyNeko/">Steam</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://tenor.com/users/vanillyneko">Tenor</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.tiktok.com/@vanillyneko">Tiktok</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.twitch.tv/vanillyneko">Twitch</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://x.com/vanillyneko">Twitter/X</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://vrchat.com/home/user/usr_79f2acb3-46b6-4a0d-a54f-af8211b16188">VRChat</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://www.youtube.com/@vanillyneko">YouTube</a>
-                            </li>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Services</span>
-                            </template>
+                                            <template v-for="(subChild, subChildIndex) in child.items" :key="`sub-${index}-${childIndex}-${subChildIndex}-${subChild.label}`">
+                                                <li v-if="canView(subChild)">
+                                                    <a v-if="subChild.target === '_blank'" :href="subChild.to" target="_blank">
+                                                        <span v-html="subChild.label"></span>
+                                                    </a>
+                                                    <NuxtLink v-else :to="subChild.to">
+                                                        <span v-html="subChild.label"></span>
+                                                    </NuxtLink>
+                                                </li>
+                                            </template>
+                                        </SubDropdown>
 
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>AI Services</span>
-                                    </template>
-
-                                    <li>
-                                        <a target="_blank" href="https://yuna.vnil.cc/">Free Chatbot <br>(Down :( For Now...)</a>
                                     </li>
-                                </SubDropdown>
-                            </li>
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>Client Services</span>
-                                    </template>
-
-                                    <li>
-                                      <a target="_blank" href="https://miku.vnil.me/">Game Panel</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://nanako.vnil.me/">IRC Client</a>
-                                    </li>
-                                </SubDropdown>
-                            </li>
-                            <li>
-                                <NuxtLink to="/discord-themes">Discord Themes</NuxtLink>
-                            </li>
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>File Sharing Services</span>
-                                    </template>
-
-                                    <li>
-                                        <a target="_blank" href="https://vnil.me/">Public Chibisafe <br> File Share Service</a>
-                                    </li>
-                                </SubDropdown>
-                            </li>
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>Media</span>
-                                    </template>
-
-                                    <li>
-                                        <a target="_blank" href="https://yuki.vnil.me">Requests (Jelly)</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://app.plex.tv/">Plex (watch)</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://emi.vnil.me/j/WEBSITE">Plex Invite (Free Use)</a>
-                                    </li>
-                                </SubDropdown>
-                            </li>
-                            <li>
-                                <NuxtLink to="/bots">Public Bots</NuxtLink>
-                            </li>
-                            <li>
-                                <SubDropdown>
-                                    <template #trigger>
-                                        <span>Sequenzia Things</span>
-                                    </template>
-
-                                    <li>
-                                        <a target="_blank" href="https://app.vnil.me/ambient?displayname=Untitled">Ambient Display</a>
-                                    </li>
-                                    <li>
-                                        <a target="_blank" href="https://app.vnil.me/">Sequenzia</a>
-                                    </li>
-                                </SubDropdown>
-                            </li>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Logins</span>
-                            </template>
-                          
-                            <li>
-                                <a target="_blank" href="https://mail.google.com/">G-Mail</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://stor.chibidreams.cloud/">Storage</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://dashboard.stripe.com">Stripe Dashboard</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://vnil.ui.com">UID</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://unifi.ui.com">Router Login</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://dash.cloudflare.com/">Cloudflare Dashboard</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://auth.kiglove.moe/realms/master/account/">SSO Auth Management</a>
-                            </li>
-                            <li v-if="hasRole(data, 'admin')">
-                              <NuxtLink to="/neko-roots">Admin Access</NuxtLink>
-                            </li>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Extra Info</span>
-                            </template>
-
-                          <SubDropdown>
-                            <template #trigger>
-                              <span>Clothing</span>
-                            </template>
-                            <li>
-                                <a target="_blank" href="https://docs.google.com/document/d/1VBMstoR9kDFxgQbyi_ZLOJ5_kriX98jv/edit?usp=sharing&ouid=103792036069402227180&rtpof=true&sd=true">Cosplay/Kigu List <br> (Has/Wants/Needs <br> Repair Or Replaced)</a>
-                            </li>
-                            <li>
-                                <a target="_blank" href="https://docs.google.com/document/d/1k19rucUBjtmiNUPRZzTijKyExhFReZwx/edit?usp=sharing&ouid=103792036069402227180&rtpof=true&sd=true">Clothing Choices <br> (Has Cosplay/Kigu Too)</a>
-                            </li>
-                            </SubDropdown>
-
-                          <SubDropdown v-if="hasOneOfRoles(data, ['size', 'calendar'])">
-                            <template #trigger>
-                              <span>Information</span>
-                            </template>
-                            <li v-if="hasRole(data, 'calendar')">
-                                <NuxtLink to="/calendar">Neko's Calendar</NuxtLink>
-                            </li>
-                            <li v-if="hasRole(data, 'size')">
-                                <NuxtLink to="/dm">Dame Measurements</NuxtLink>
-                            </li>
-                            </SubDropdown>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <Dropdown>
-                            <template #trigger>
-                                <span>Contact Us</span>
-                            </template>
-
-                            <li>
-                                <NuxtLink to="/contact">Contact Info</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/artists">My Artists</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/privacy">Privacy Policy</NuxtLink>
-                            </li>
-                            <li>
-                                <NuxtLink to="/status">Status</NuxtLink>
-                            </li>
-                        </Dropdown>
-                    </li>
-                    <li>
-                        <NuxtLink v-if="status === 'authenticated'" to="/account">Account</NuxtLink>
-                        <NuxtLink v-else to="/auth/login"><span>Login</span></NuxtLink>
-                    </li>
+                                </template>
+                            </Dropdown>
+                        </li>
+                    </template>
                 </ul>
             </div>
         </nav>
