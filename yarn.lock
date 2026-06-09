@@ -672,12 +672,12 @@
   dependencies:
     "@iconify/types" "^2.0.0"
 
-"@iframe-resizer/child@^5.4.7":
-  version "5.4.7"
-  resolved "https://registry.yarnpkg.com/@iframe-resizer/child/-/child-5.4.7.tgz#6ebd4e85698651486da33d944d7d9ffc8f411643"
-  integrity sha512-dROsfovVx3EBsHFQhZNfI36HSCRWaXYeWfbnt2tl6AGm9qmzHKulIpVluJRpbJ7rv9Va8EGbycLtEhuqvXVufg==
+"@iframe-resizer/child@^5.5.9":
+  version "5.5.9"
+  resolved "https://registry.yarnpkg.com/@iframe-resizer/child/-/child-5.5.9.tgz#f6fc556ba8424d75cf1fb1a6af0406e4a52337c8"
+  integrity sha512-kX4GeGvlfu9S0XfDgSEy+O36q6qFz17kslLYdBT1evBTCK7Q3ETYtZMzVnHlB5PKc9co699kWEZbmpUGtE9IQw==
   dependencies:
-    auto-console-group "1.2.9"
+    auto-console-group "1.3.0"
 
 "@iframe-resizer/core@5.4.7":
   version "5.4.7"
@@ -2826,6 +2826,11 @@ auto-console-group@1.2.9:
   version "1.2.9"
   resolved "https://registry.yarnpkg.com/auto-console-group/-/auto-console-group-1.2.9.tgz#a3ccc1befcc23e10866d0c1ce456d769c305b803"
   integrity sha512-YGJqZByv1SFIq8viTpKFmI0eNHIoa9hllKP3487VbIN4zjRcsKKoouu2TiQ189oscvwCSKTndfAe6wf6izbSMA==
+
+auto-console-group@1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/auto-console-group/-/auto-console-group-1.3.0.tgz#21870bad097192b5950f10a3bdf6054c74971934"
+  integrity sha512-W/G5jy1ZPeVYPyqOVGND7EjbzrsLgRD3s+1QegXfJ7bYlphFxjqG60rviFXWw0d2YCj0Clc7hU5/nTqrBEhBIw==
 
 autoprefixer@^10.4.22:
   version "10.4.23"
