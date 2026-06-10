@@ -107,6 +107,7 @@ export const navbarItems: NavbarItem[] = [
             { label: 'Snapchat', to: 'https://www.snapchat.com/@vanillyneko', target: '_blank', type: 'link' },
             { label: 'Spotify', to: 'https://open.spotify.com/user/alrider01226', target: '_blank', type: 'link' },
             { label: 'Steam', to: 'https://steamcommunity.com/id/VanillyNeko/', target: '_blank', type: 'link' },
+            { label: 'Telegram', to: 'https://t.me/+w3kE52lIFdZlNjNh', target: '_blank', type: 'link' },
             { label: 'Tenor', to: 'https://tenor.com/users/vanillyneko', target: '_blank', type: 'link' },
             { label: 'Tiktok', to: 'https://www.tiktok.com/@vanillyneko', target: '_blank', type: 'link' },
             { label: 'Twitch', to: 'https://www.twitch.tv/vanillyneko', target: '_blank', type: 'link' },
