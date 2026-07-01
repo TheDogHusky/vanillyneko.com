@@ -12,7 +12,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@iframe-resizer/child": "^5.4.7",
+    "@iframe-resizer/child": "^5.5.9",
     "@iframe-resizer/vue": "^5.4.7",
     "@nuxt/icon": "^2.0.0",
     "@nuxt/image": "1.10.0",
