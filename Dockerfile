@@ -1,5 +1,5 @@
 # Build stage
-FROM node:22-alpine AS builder
+FROM node:26-alpine AS builder
 
 WORKDIR /app
 
@@ -10,7 +10,7 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 COPY package.json yarn.lock ./
 
 # Install all dependencies (including devDependencies for building)
-RUN yarn install --frozen-lockfile
+RUN yarn workspaces focus
 
 # Copy source code
 COPY . .
@@ -19,7 +19,7 @@ COPY . .
 RUN yarn build
 
 # Production stage
-FROM node:22-alpine AS production
+FROM node:26-alpine AS production
 
 WORKDIR /app
 
@@ -30,7 +30,7 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 COPY package.json yarn.lock ./
 
 # Install only production dependencies
-RUN yarn install --frozen-lockfile --production && yarn cache clean
+RUN yarn workspaces focus --production && yarn cache clean
 
 # Copy built application from builder stage
 COPY --from=builder /app/.output ./.output
