@@ -8,7 +8,7 @@ RUN corepack enable && corepack prepare yarn@stable --activate
 
 COPY package.json yarn.lock .yarnrc.yml ./
 
-RUN YARN_ENABLE_SCRIPTS=0 yarn workspaces focus || (cat /tmp/*/build.log && exit 1)
+RUN yarn workspaces focus
 
 COPY . .
 
