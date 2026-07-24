@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     future: { compatibilityVersion: 4 },
 
     css: ['~/assets/css/main.css'],
-    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', '@sidebase/nuxt-auth', 'nuxt-toast'],
+    modules: ['@nuxt/icon', '@nuxt/image', '@vueuse/nuxt', '@nuxtjs/mdc', '@nuxtjs/seo', 'nuxt-toast', '@sidebase/nuxt-auth'],
 
     routeRules: {
         '/l/**': { ssr: false }
@@ -48,11 +48,10 @@ export default defineNuxtConfig({
         head: {
             htmlAttrs: { lang: 'en' },
 
-            // Crisp script – works perfectly in Nuxt 4
+            // Crisp script
             script: [
                 {
                     type: 'text/javascript',
-                    // We read the runtime config at build/dev time (server-side)
                     innerHTML: `
             window.$crisp = [];
             window.CRISP_WEBSITE_ID = "${process.env.NUXT_PUBLIC_CRISP_WEBSITE_ID || '00d37c08-ee9e-4812-a4fe-1cdff160b835'}";
