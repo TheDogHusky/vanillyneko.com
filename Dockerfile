@@ -23,6 +23,7 @@ RUN addgroup -g 1001 -S nodejs
 RUN adduser -S nuxt -u 1001
 
 COPY --from=builder --chown=nuxt:nodejs /app/.output ./.output
+COPY --from=builder --chown=nuxt:nodejs /app/node_modules ./node_modules
 
 USER nuxt
 
