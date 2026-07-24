@@ -24,6 +24,7 @@ FROM node:26-alpine AS production
 WORKDIR /app
 
 # Install yarn
+RUN npm install -g corepack
 RUN corepack enable && corepack prepare yarn@stable --activate
 
 # Copy package files
