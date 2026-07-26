@@ -41,12 +41,7 @@ export default defineNuxtConfig({
     },
 
     vite: {
-        optimizeDeps: { include: ['debug'] },
-        build: {
-            rolldownOptions: {
-                external: ['@iframe-resizer/vue/sfc']
-            }
-        }
+        optimizeDeps: { include: ['debug'] }
     },
 
     app: {
