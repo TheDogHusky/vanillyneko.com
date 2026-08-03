@@ -27,7 +27,7 @@
     "mobile-device-detect": "^0.4.3",
     "next-auth": "4.21.1",
     "nuxt": "^4.5.0",
-    "nuxt-og-image": "^6.4.9",
+    "nuxt-og-image": "^6.7.5",
     "nuxt-toast": "1.4.0"
   },
   "packageManager": "yarn@4.17.1",
