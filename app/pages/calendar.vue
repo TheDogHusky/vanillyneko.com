@@ -2,7 +2,7 @@
 import { requireRole } from "~/utils/functions";
 
 definePageMeta({
-    auth: true,
+    auth: false,
     middleware: ['sidebase-auth', requireRole("calendar")]
 });
 
