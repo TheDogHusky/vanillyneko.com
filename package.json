@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@iframe-resizer/vue": "^5.5.9",
-    "@nuxt/icon": "^2.0.0",
+    "@nuxt/icon": "^2.4.1",
     "@nuxt/image": "1.10.0",
     "@nuxtjs/mdc": "0.17.2",
     "@nuxtjs/seo": "^3.1.0",
