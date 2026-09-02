@@ -5,7 +5,7 @@ definePageMeta({
 
 const { signIn } = useAuth();
 
-signIn("keycloak", {
+signIn("authentik", {
     callbackUrl: "/",
     redirect: true
 });
