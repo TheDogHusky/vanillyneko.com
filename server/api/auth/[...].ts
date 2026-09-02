@@ -2,7 +2,7 @@ import { NuxtAuthHandler } from '#auth';
 import Authentik, { AuthentikProfile } from "next-auth/providers/authentik";
 import { jwtDecode } from "jwt-decode";
 
-interface VanillyKeycloakProfile extends AuthentikProfile {
+interface VanillyAuthentikProfile extends AuthentikProfile {
     roles?: string[];
 }
 
@@ -62,14 +62,14 @@ export default NuxtAuthHandler({
     secret: useRuntimeConfig().authSecret,
     providers: [
         // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
-        Authentik.default<AuthentikProfile & { roles?: string[] }>({
+        Authentik.default<VanillyAuthentikProfile & { roles?: string[] }>({
             clientId: useRuntimeConfig().authentikClientId,
             clientSecret: useRuntimeConfig().authentikClientSecret,
             issuer: useRuntimeConfig().public.authentikIssuer as string,
             authorization: {
                 params: { scope: "openid profile email offline_access roles" }
             },
-            profile(profile: any) {
+            profile(profile: VanillyAuthentikProfile) {
                 return {
                     id: profile.sub,
                     name: profile.name ?? profile.preferred_username,
