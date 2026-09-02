@@ -69,10 +69,6 @@ export default NuxtAuthHandler({
             authorization: {
                 params: { scope: "openid profile email offline_access roles" }
             },
-            pages: {
-                error: '/auth/error',
-                signIn: '/auth/login'
-            },
             profile(profile: any) {
                 return {
                     id: profile.sub,

@@ -40,10 +40,6 @@ export default defineNuxtConfig({
         authOrigin: ''
     },
 
-    auth: {
-        originEnvKey: 'NUXT_AUTH_ORIGIN'
-    },
-
     vite: {
         optimizeDeps: { include: ['debug'] }
     },
@@ -97,7 +93,7 @@ export default defineNuxtConfig({
         provider: {
             type: 'authjs',
             trustHost: true,
-            defaultProvider: 'vanillynekoauth'
+            defaultProvider: 'authentik'
         }
     }
 })
