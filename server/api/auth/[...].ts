@@ -1,8 +1,8 @@
 import { NuxtAuthHandler } from '#auth';
-import KeycloakProvider, { KeycloakProfile } from "next-auth/providers/keycloak";
+import Authentik, { AuthentikProfile } from "next-auth/providers/authentik";
 import { jwtDecode } from "jwt-decode";
 
-interface VanillyKeycloakProfile extends KeycloakProfile {
+interface VanillyAuthentikProfile extends AuthentikProfile {
     roles?: string[];
 }
 
@@ -13,8 +13,8 @@ const refreshAccessToken = async (token: any) => {
         const details: {
             [key: string]: string
         } = {
-            client_id: process.env.NUXT_KEYCLOACK_CLIENT_ID!,
-            client_secret: process.env.NUXT_KEYCLOACK_CLIENT_SECRET!,
+            client_id: process.env.NUXT_AUTHENTIK_CLIENT_ID!,
+            client_secret: process.env.NUXT_AUTHENTIK_CLIENT_SECRET!,
             grant_type: 'refresh_token',
             refresh_token: token.refreshToken
         }
@@ -23,7 +23,7 @@ const refreshAccessToken = async (token: any) => {
             .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(details[key] as string))
             .join('&');
 
-        const url = `${process.env.NUXT_PUBLIC_KEYCLOACK_ISSUER}/protocol/openid-connect/token`;
+        const url = `${process.env.NUXT_PUBLIC_AUTHENTIK_ISSUER}/token`;
 
         const response = await fetch(url, {
             method: 'POST',
@@ -40,10 +40,11 @@ const refreshAccessToken = async (token: any) => {
             accessToken: refreshedTokens.access_token,
             accessTokenExpires: Date.now() + refreshedTokens.expires_in * 1000,
             refreshToken: refreshedTokens.refresh_token ?? token.refreshToken,
-            roles: tokenData.resource_access.vanillynekocom?.roles || [],
+            roles: tokenData.roles || [],
             user: {
-                name: tokenData.name,
-                email: tokenData.email
+                name: tokenData.name?? tokenData.preferred_username,
+                email: tokenData.email,
+                image: tokenData.picture
             }
         }
     } catch (error: any) {
@@ -60,18 +61,21 @@ const refreshAccessToken = async (token: any) => {
 export default NuxtAuthHandler({
     secret: useRuntimeConfig().authSecret,
     providers: [
-        // @ts-ignore - see https://github.com/sidebase/nuxt-auth/issues/760
-        KeycloakProvider.default<VanillyKeycloakProfile>({
-            clientId: useRuntimeConfig().keycloackClientId,
-            clientSecret: useRuntimeConfig().keycloackClientSecret,
-            issuer: useRuntimeConfig().public.keycloackIssuer,
-            profile(profile: any) {
+        // @ts-expect-error You need to use .default here for it to work during SSR. May be fixed via Vite at some point
+        Authentik.default<VanillyAuthentikProfile & { roles?: string[] }>({
+            clientId: useRuntimeConfig().authentikClientId,
+            clientSecret: useRuntimeConfig().authentikClientSecret,
+            issuer: useRuntimeConfig().public.authentikIssuer as string,
+            authorization: {
+                params: { scope: "openid profile email offline_access roles" }
+            },
+            profile(profile: VanillyAuthentikProfile) {
                 return {
                     id: profile.sub,
                     name: profile.name ?? profile.preferred_username,
                     email: profile.email,
                     image: profile.picture,
-                    roles: profile.resource_access.vanillynekocom?.roles || []
+                    roles: profile.roles || []
                 };
             }
         })

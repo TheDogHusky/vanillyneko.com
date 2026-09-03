@@ -31,13 +31,13 @@ export default defineNuxtConfig({
     runtimeConfig: {
         public: {
             backgroundImage: '/img/background.jpg',
-            crispWebsiteId: process.env.NUXT_PUBLIC_CRISP_WEBSITE_ID,
-            keycloackIssuer: process.env.NUXT_PUBLIC_KEYCLOAK_ISSUER
+            crispWebsiteId: '',
+            authentikIssuer: ''
         },
-        authSecret: process.env.NUXT_AUTH_SECRET,
-        keycloackClientId: process.env.NUXT_KEYCLOAK_CLIENT_ID,
-        keycloackClientSecret: process.env.NUXT_KEYCLOAK_CLIENT_SECRET,
-        authOrigin: process.env.NUXT_AUTH_ORIGIN
+        authSecret: '',
+        authentikClientId: '',
+        authentikClientSecret: '',
+        authOrigin: ''
     },
 
     vite: {
@@ -93,7 +93,7 @@ export default defineNuxtConfig({
         provider: {
             type: 'authjs',
             trustHost: true,
-            defaultProvider: 'vanillynekoauth'
+            defaultProvider: 'authentik'
         }
     }
 })
