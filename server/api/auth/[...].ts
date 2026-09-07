@@ -1,6 +1,7 @@
 import { NuxtAuthHandler } from '#auth';
 import Authentik, { AuthentikProfile } from "next-auth/providers/authentik";
 import { jwtDecode } from "jwt-decode";
+import { inspect } from 'node:util';
 
 interface VanillyAuthentikProfile extends AuthentikProfile {
     roles?: string[];
@@ -53,7 +54,7 @@ const refreshAccessToken = async (token: any) => {
             user: {
                 roles: []
             },
-            error: "RefreshAccessTokenError: " + error.error + ": " + error.error_description
+            error: "RefreshAccessTokenError: " + error.message
         }
     }
 }
