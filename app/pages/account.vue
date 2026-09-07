@@ -5,7 +5,8 @@ definePageMeta({
 });
 
 const { data, signOut } = useAuth();
-const manageAccountURL = useRuntimeConfig().public.keycloackIssuer + "/account";
+const issuerUrl = new URL(useRuntimeConfig().public.authentikIssuer);
+const manageAccountUrl = `${issuerUrl.origin}/if/user/#/settings`;
 
 function logOut() {
     signOut({
@@ -37,7 +38,7 @@ function logOut() {
             </li>
         </ul>
         <div class="btn-group">
-            <a class="btn btn-lg btn-success" :href="manageAccountURL" target="_blank">Manage Account</a>
+            <a class="btn btn-lg btn-success" :href="manageAccountUrl" target="_blank" rel="noopener noreferrer">Manage Account</a>
             <button class="btn btn-danger btn-lg" @click="logOut">
                 Sign Out
             </button>
