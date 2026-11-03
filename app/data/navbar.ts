@@ -128,6 +128,12 @@ export const navbarItems: NavbarItem[] = [
                 ]
             },
             {
+                label: 'IRCCord',
+                to: 'https://irccord.com/',
+                target: '_blank',
+                type: 'link'
+            },
+            {
                 label: 'Client Services',
                 type: 'subdropdown',
                 items: [
